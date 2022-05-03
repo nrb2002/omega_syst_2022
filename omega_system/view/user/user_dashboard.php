@@ -12,14 +12,14 @@
 
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="script/Css/style.css">
+        <link rel="stylesheet" href="script/Css/B_stylepage.css">   
+
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 
 
         
-        <link rel="stylesheet" href="../../script/Css/style.css">
-        <link rel="stylesheet" href="../../script/Css/B_stylepage.css">   
-
-          
+     
     </head>
 
     <body>
@@ -35,7 +35,9 @@
                     <a class="nav-link" href="#">Paramètres</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Se déconnecter</a>
+
+                    <a class="nav-link" href="index.php?logout=0">Se déconnecter</a>
+
                     </li>                
                 </ul>    
             </div> 
@@ -54,7 +56,9 @@
                         <a class="nav-link" id="contactInfo-tab" data-toggle="tab" href="#contactInfo" role="tab" aria-controls="contactInfo" aria-selected="false">Coordonnées</a>
                     </li>
                     <li class="nav-item">
+
                         <a class="nav-link" id="offers-tab" data-toggle="tab" href="#offers" role="tab" aria-controls="offers" aria-selected="false">Appels d'offres</a>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="finance-tab" data-toggle="tab" href="#finance" role="tab" aria-controls="finance" aria-selected="false">Finances</a>
@@ -85,7 +89,9 @@
                                     <h5 class="text-danger">Identité de l'entité</h5>
                                     <!--Logo-->
                                     <div class="row ">
+
                                         <div class="col-sm-6 p-2 m-auto">
+
                                             <img src="data/img/design/logo TB5.jpg" alt="Logo" width="250px">
                                         </div>                                                      
                                     </div>
@@ -138,7 +144,9 @@
                                 <div class="col ml-2">
                                     <!--Financial data-->
                                     <h5 class="text-danger">Données financières</h5>
+
                                     <div class="row mt-2 border p-2">                                        
+
                                         <table class="table table-hover table-borderless">
                                             <!--
                                             <thead>
@@ -169,7 +177,9 @@
                                     <hr>
                                     <!--Personel data-->
                                     <h5 class="text-danger">Ressources humaines</h5>
+
                                     <div class="row mt-2 border p-2">
+
                                         <table class="table table-hover table-borderless">
                                             <!--
                                             <thead>
@@ -213,6 +223,7 @@
                         
                         <!--Contact Info tab pane-->
                         <div class="tab-pane" id="contactInfo" role="tabpanel" aria-labelledby="contactInfo-tab">
+
                             <div class="row gx-2 p-2">
 
                                 <!--Business Info data-->
@@ -607,6 +618,7 @@
                             </div> 
                             <!--Applications-->
 
+
                         </div>
 
                         <!--Finance tab pane-->
@@ -656,14 +668,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+
+        <script src="script/Js/script.js"></script>
+
         <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
 
         <!--Scripts related to table pagination-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 
-    
-        <script src="../../script/Js/script.js"></script>
 
         <!--Script for filters-->
         <script>
@@ -712,8 +725,6 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-        
 
 
     </body>

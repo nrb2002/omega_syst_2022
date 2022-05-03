@@ -6,33 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omega System - Login Utilisateur</title>
 
-    <!-- Favicon icon -->
-    <link rel="icon" href="assets/images/logo_icon.png" type="image/x-icon">
-    
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="script/Css/B_stylepage.css">
-    <link rel="stylesheet" href="../../script/Css/style.css">
-    
+    <link rel="stylesheet" href="../Scripts/Css/style.css">
+    <link rel="stylesheet" href="Scripts/Css/B_stylepage.css">
     
 </head>
-<body> 
+<body>
+    <!--Navigation bar-->
+    <nav class="navbar navbar-expand-md  stiky-top" style="background-color:black; margin-bottom:1%;">
+        <div class="container-fluid">
+            <a href="index.php" class="navbar-brand"><img src="Data/Images/Design/logo_omega.png" width="80px" style="border-radius:6px" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">              
+              <li class="nav-item">
+                <a href="view/user/cat_selection.html"><button class="btn btn-outline-primary" >S'enregistrer</button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Besoin d'aide?</a>
+              </li>
+                            
+            </ul>
+          </div>
+        </div>        
+    </nav>
+    
+
     
     <!--PEN CONTENT     -->
-    <div class="content bg-light">
+    <div class="content">
         <!--content inner-->
         <div class="content__inner">
 
             <!--user login form main container-->
             <div class="container overflow-hidden">
                 <!--userlogin-form-->
-                <div class="login-form" style="margin: 5% 0 14%;">
+                <div class="login-form">
                     <!--form title-->
                     <div class="row">
                         <div class="col-sm-10 mt-4 m-auto">
                             <div class="login-form__title text-center">
-                                <?php include('view/omega_header.html') ?>
+                                <h3><strong>Profitez des avantages incontournables qu'offre</strong></h3>
+                                <h1><strong>OMEGA</strong><em style="color:red;">System</em></h1>
+                                <h3>en matière de "Doing Business" en RDC</h3>
                             </div>
                         </div>
                         
@@ -40,18 +59,16 @@
                     
                     <!--user login form panel-->
                     <div class="row">
-                        <div class="col-sm-6 m-auto mb-0">
+                        <div class="col-sm-6 m-auto">
                             <form class="login-form__form border bg-light" method="post" action="index_admin.php">
                                 
                                 <!--single form panel - User Login-->
-                                <div class="login-form__panel shadow p-4 rounded bg-light" data-animation="slideHorz ">
+                                <div class="login-form__panel shadow p-4 rounded bg-light" data-animation="slideHorz">
                                     
                                     <div class="login-form__content">
                                         <!--Print error message if field are empty-->
-
-                                        <i style="color: red;"><?php echo  $msg ?></i><br>
-
-                                        <h4>Espace Admin</h4>
+                                        <i style="color: red;"><?php echo  $msg; ?></i><br>
+                                        <h4>Login</h4>
                                         <hr>
                                         <!--user login form fields-->
                                         <div class="form-row mt-4">
@@ -59,9 +76,7 @@
                                                 <label for=""><b>Identifiant</b></label> 
                                             </div>                                           
                                             <div class="col-10 col-sm-7 mt-5 mt-sm-0">
-
                                                 <input class="login-form__input form-control" type="text" name="login_admin" id="login_admin" placeholder="Votre identifiant unique" required/>                                        
-
                                             </div>
                                         </div>
                                         <div class="form-row mt-4">
@@ -69,9 +84,7 @@
                                                 <label for=""><b>Mot de passe</b></label> 
                                             </div>                                           
                                             <div class="col-10 col-sm-7 mt-4 mt-sm-0">
-
-                                                <input class="login-form__input form-control" type="password" name="admin_mdp" id="admin_mdp" placeholder="**********" required/>
-
+                                                <input class="login-form__input form-control" type="password" name="mdp_admin" id="mdp_admin" placeholder="**********" required/>
                                             </div>
                                         </div>
                                         <div class="form-row mt-4">
@@ -83,7 +96,7 @@
                                         <!--login button-->
                                         <div class="button-row row-sm-8 d-flex mt-4">
                                             <div class="col-sm-8 m-auto">
-                                                <button type="submit" class="btn btn-success ml-auto" style="width: 250px;" title="Send" value="Acceder">Accéder</button>
+                                                <button type="submit" class="btn btn-primary ml-auto" style="width: 250px;background:black;" title="Send" value="Acceder">Accéder</button>
                                             </div>                                            
                                         </div>
 
@@ -99,6 +112,15 @@
                         </div>
                     </div>
 
+                    <!--user registration redirection panel-->
+                    <div class="row mt-4 mb-4">
+                        <div class="col-sm-6  m-auto">
+                            <div>
+                                <h5>Vous n'êtes pas encore membre?</h5>
+                                <a href="view/user/cat_selection.html"><button class="btn btn-outline-primary" >Enregistrez-vous maintenant !</button></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -133,6 +155,3 @@
     </script>
 </body>
 </html>
-
-
-        

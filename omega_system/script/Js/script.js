@@ -181,6 +181,7 @@ animationSelect.addEventListener('change', () => {
   const newAnimationType = animationSelect.value;
 
   setAnimationType(newAnimationType);
+
 });
 
 

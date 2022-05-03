@@ -1,5 +1,5 @@
 <?php
-        session_start();
+
         //Bays @ code
         //version A0 Oméga System
         //main navbar omega système

@@ -14,12 +14,8 @@
 </head>
 
 <body>
-<!--Navigation bar-->
-<?php include('../../view/navbar.html')  ?>
-<!--Navigation bar-->
 
-
-<!--PEN HEADER-->
+  <!--PEN HEADER-->
 <header class="header">
   <h2 class="header__title" style="color:green;">Confirmation</h2>
   
@@ -45,10 +41,6 @@
   </div>
 </div>
 
-
-<!-- footer -->
-<?php include('../footer.html') ?>
-<!-- footer -->
 
 <!-- Javascript -->
 

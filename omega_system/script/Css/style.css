@@ -12,7 +12,7 @@ body {
   font-size: 16px;
   color: #2c2c2c;
   height: auto;
-  
+
 }
 body a {
   color: inherit;
@@ -47,16 +47,16 @@ nav a li{
 .logo{
   height: 12rem;
   width: 12rem;
-  width: 6%;  
+   
   border-radius: 5px;
   margin: 10px;
   background-image:url('../../data/img/design/logo_omega.png');
+
 }
 
 footer{
   width: 100%;
 }
-
 
 
 .omega__btn {
