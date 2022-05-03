@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 $access='c4a42871f05bd4581f034c0fac2353ed';
 $msg="";
@@ -11,7 +12,7 @@ if(isset($_POST['mdp'])){
         $msg="Votre login comporte des caractères non autorisés";
         include_once('view/user/user_login.php');
     }elseif($utilisateur->nbr_psw<8 || $utilisateur->char_psw==0){
-        $msg="Le Format de votre mot de passe est invalide";
+        $msg="Mot de passe invalide.";
         include_once('view/user/user_login.php');
     }else{
         $utilisateur=new utilisateur(); $utilisateur->get_data_user(); $utilisateur->set_data_user();
@@ -19,7 +20,7 @@ if(isset($_POST['mdp'])){
             $_SESSION['etat']='c4a42871f05bd4581f034c0fac2353ed';
             $_SESSION['nomuser']=$utilisateur->denom_user;
         }else{
-            $msg="Votre Login ou mot de passe incorect";
+            $msg="Login ou mot de passe incorrect";
             include_once('view/user/user_login.php');
         }
     }

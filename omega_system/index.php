@@ -1,4 +1,5 @@
 <?php
+
         //Bays @ code
         //version A0 Oméga System
         //<!--Navbar-->
@@ -6,6 +7,7 @@
     //<!--Navbar-->
 
      include_once('controller/user_authentication.php');
+
 
         //footer omega système
         include('view/footer.html');

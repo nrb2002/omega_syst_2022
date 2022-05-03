@@ -14,7 +14,12 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <link rel="stylesheet" href="script/Css/style.css">
         <link rel="stylesheet" href="script/Css/B_stylepage.css">   
-         
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+
+        
+     
     </head>
 
     <body>
@@ -30,7 +35,9 @@
                     <a class="nav-link" href="#">Paramètres</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="index.php?access=0">Se déconnecter</a>
+
+                    <a class="nav-link" href="index.php?logout=0">Se déconnecter</a>
+
                     </li>                
                 </ul>    
             </div> 
@@ -49,7 +56,9 @@
                         <a class="nav-link" id="contactInfo-tab" data-toggle="tab" href="#contactInfo" role="tab" aria-controls="contactInfo" aria-selected="false">Coordonnées</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="aao-tab" data-toggle="tab" href="#aao" role="tab" aria-controls="aao" aria-selected="false">AAO</a>
+
+                        <a class="nav-link" id="offers-tab" data-toggle="tab" href="#offers" role="tab" aria-controls="offers" aria-selected="false">Appels d'offres</a>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="finance-tab" data-toggle="tab" href="#finance" role="tab" aria-controls="finance" aria-selected="false">Finances</a>
@@ -80,7 +89,9 @@
                                     <h5 class="text-danger">Identité de l'entité</h5>
                                     <!--Logo-->
                                     <div class="row ">
-                                        <div class="col-sm-6 bg-light p-2 m-auto">
+
+                                        <div class="col-sm-6 p-2 m-auto">
+
                                             <img src="data/img/design/logo TB5.jpg" alt="Logo" width="250px">
                                         </div>                                                      
                                     </div>
@@ -133,7 +144,9 @@
                                 <div class="col ml-2">
                                     <!--Financial data-->
                                     <h5 class="text-danger">Données financières</h5>
-                                    <div class="row mt-2 border bg-light p-2">                                        
+
+                                    <div class="row mt-2 border p-2">                                        
+
                                         <table class="table table-hover table-borderless">
                                             <!--
                                             <thead>
@@ -164,7 +177,9 @@
                                     <hr>
                                     <!--Personel data-->
                                     <h5 class="text-danger">Ressources humaines</h5>
-                                    <div class="row mt-2 border bg-light p-2">
+
+                                    <div class="row mt-2 border p-2">
+
                                         <table class="table table-hover table-borderless">
                                             <!--
                                             <thead>
@@ -208,26 +223,402 @@
                         
                         <!--Contact Info tab pane-->
                         <div class="tab-pane" id="contactInfo" role="tabpanel" aria-labelledby="contactInfo-tab">
-                            <div class="row">
-                                    <div class="col p-4">
-                                    <h3>Coordonnées</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in ligula non odio sagittis elementum eget laoreet eros. Vivamus nec tellus ullamcorper diam pharetra fermentum. Quisque pellentesque, nunc nec maximus commodo, ipsum ipsum pretium sapien, et tincidunt nisl neque et nunc. Vestibulum ut lacus in turpis euismod euismod ut ut erat. Pellentesque sit amet pellentesque orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut elit nisi, lobortis eget porttitor a, imperdiet a dolor. Etiam vitae nisi accumsan, ultricies justo eget, volutpat nisl. Duis condimentum nisi quis neque fringilla, at accumsan magna vulputate. Nunc ut sodales nunc. Vivamus non feugiat nibh. Morbi sagittis laoreet lacus, in pretium enim sollicitudin ac. Nulla facilisi. Duis a ipsum quis dui ullamcorper consectetur vitae vitae nunc. Sed ut aliquet neque.
-                                    </p>
-                                    </div>
-                                </div>
-                        </div>
 
-                        <!--AAO tab pane-->
-                        <div class="tab-pane" id="aao" role="tabpanel" aria-labelledby="aao-tab">
-                            <div class="row">
-                                    <div class="col p-4">
-                                    <h3>AAO</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in ligula non odio sagittis elementum eget laoreet eros. Vivamus nec tellus ullamcorper diam pharetra fermentum. Quisque pellentesque, nunc nec maximus commodo, ipsum ipsum pretium sapien, et tincidunt nisl neque et nunc. Vestibulum ut lacus in turpis euismod euismod ut ut erat. Pellentesque sit amet pellentesque orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut elit nisi, lobortis eget porttitor a, imperdiet a dolor. Etiam vitae nisi accumsan, ultricies justo eget, volutpat nisl. Duis condimentum nisi quis neque fringilla, at accumsan magna vulputate. Nunc ut sodales nunc. Vivamus non feugiat nibh. Morbi sagittis laoreet lacus, in pretium enim sollicitudin ac. Nulla facilisi. Duis a ipsum quis dui ullamcorper consectetur vitae vitae nunc. Sed ut aliquet neque.
-                                    </p>
-                                    </div>
+                            <div class="row gx-2 p-2">
+
+                                <!--Business Info data-->
+                                <div class="col bg-light ">
+                                    <div class="row">
+                                        <div class="col ml-0 m-2">
+                                            <h5 class="text-danger">Coordonnées de l'Entreprise</h5>
+                                        </div>
+                                        <div class="col-2 justify-content-end p-2 mr-4">
+                                            <button class="btn btn-primary" type="submit" >Modifier</button>
+                                        </div>
+                                    </div> 
+                                    
+                                    <!-- Business contact -->
+                                    <div class="row border m-auto ">                                        
+                                        <div class="row">
+                                            <div class="col ">
+                                                <table class="table table-hover table-borderless">
+                                                    <!--
+                                                    <thead>
+                                                        <tr>
+                                                        <th scope="col">First</th>
+                                                        <th scope="col">Last</th>
+                                                        <th scope="col">Handle</th>
+                                                        </tr>
+                                                    </thead>
+                                                    -->
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Téléphone</th>
+                                                            <td>+243822358941</td>                                                        
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Adresse électronique</th>
+                                                            <td>infos@tb5.com</td>                                                        
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Site web</th>
+                                                            <td>www.tb5.cd</td>                                                        
+                                                        </tr>                                                    
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>                                                      
+                                    </div>                                    
+                                    <!-- Business contact -->
+                                    
+                                    <!-- HQ location Business-->
+                                    <div class="row border m-auto">
+                                        <div class="row p-2 ml-2 bg-success">
+                                            <h6>Siège social</h6>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col ">
+                                                <table class="table table-hover table-borderless">
+                                                    <!--
+                                                    <thead>
+                                                        <tr>
+                                                        <th scope="col">First</th>
+                                                        <th scope="col">Last</th>
+                                                        <th scope="col">Handle</th>
+                                                        </tr>
+                                                    </thead>
+                                                    -->
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Rue, Numéro, Quartier, Commune/Territoire/Village</th>
+                                                            <td>Bld Sendwe, N° 50, Q/Matonge, C/Kalamu</td>                                                        
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Ville</th>
+                                                            <td>Kinshasa</td>                                                        
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Pays</th>
+                                                            <td>République Démocratique du Congo</td>                                                        
+                                                        </tr>                                                    
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>                                                      
+                                    </div>                                    
+                                    <!--HQ location Business-->
+
+                                    <!-- Exploitation location Business-->
+                                    <div class="row border m-auto">
+                                        <div class="row p-2 ml-2 bg-success">
+                                            <h6>Siège d'exploitation</h6>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col ">
+                                                <table class="table table-hover table-borderless">
+                                                    <!--
+                                                    <thead>
+                                                        <tr>
+                                                        <th scope="col">First</th>
+                                                        <th scope="col">Last</th>
+                                                        <th scope="col">Handle</th>
+                                                        </tr>
+                                                    </thead>
+                                                    -->
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Rue, Numéro, Quartier, Commune/Territoire/Village</th>
+                                                            <td>Bld Sendwe, N° 50, Q/Matonge, C/Kalamu</td>                                                        
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Ville</th>
+                                                            <td>Kinshasa</td>                                                        
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Pays</th>
+                                                            <td>République Démocratique du Congo</td>                                                        
+                                                        </tr>                                                    
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>                                                      
+                                    </div>                                    
+                                    <!--Exploitation location Business-->
                                 </div>
+                                <!--Business Info data-->
+
+                                <!--Contact Info data-->
+                                <div class="col bg-light">
+                                    <div class="row">
+                                        <div class="col ml-0 pl-0">
+                                            <h5 class="text-danger">Coordonnées du Représentant Légal</h5>
+                                        </div>
+                                        <div class="col-2 justify-content-end p-2 mr-1">
+                                            <button class="btn btn-primary" type="submit" >Modifier</button>
+                                        </div>
+                                    </div>                                    
+                                    
+                                    <!--Contact Info Local Rep-->
+                                    <div class="row border">
+                                        <div class="col ">
+                                            <table class="table table-hover table-borderless">
+                                                <!--
+                                                <thead>
+                                                    <tr>
+                                                    <th scope="col">First</th>
+                                                    <th scope="col">Last</th>
+                                                    <th scope="col">Handle</th>
+                                                    </tr>
+                                                </thead>
+                                                -->
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Nom</th>
+                                                        <td>Mukendi</td>                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Prénom</th>
+                                                        <td>Giresse</td>                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Téléphone</th>
+                                                        <td>+243818382027</td>                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Adresse électronique</th>
+                                                        <td>giresse.mukendi@tb5.cd</td>                                                        
+                                                    </tr>                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>                                                      
+                                    </div>                                    
+                                    <!--Contact Info Local Rep-->
+
+                                    <!-- Home address Local Rep -->
+                                    <div class="row border mt-2">
+                                        <div class="row p-2 ml-2 bg-success">
+                                            <h6>Adresse Domicile</h6>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col ">
+                                                <table class="table table-hover table-borderless">
+                                                    <!--
+                                                    <thead>
+                                                        <tr>
+                                                        <th scope="col">First</th>
+                                                        <th scope="col">Last</th>
+                                                        <th scope="col">Handle</th>
+                                                        </tr>
+                                                    </thead>
+                                                    -->
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Rue, Numéro, Quartier, Commune/Territoire/Village</th>
+                                                            <td>Bld Sendwe, N° 50, Q/Matonge, C/Kalamu</td>                                                        
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Ville</th>
+                                                            <td>Kinshasa</td>                                                        
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Pays</th>
+                                                            <td>République Démocratique du Congo</td>                                                        
+                                                        </tr>                                                    
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>                                                      
+                                    </div>                                    
+                                    <!--Contact Info local rep-->
+                                    
+                                </div>
+                                <!--Contact Info data-->
+                            </div>
+                        </div>
+                        <!--Contact Info tab pane-->
+
+                        <!--Offers tab pane-->
+                        <div class="tab-pane" id="offers" role="tabpanel" aria-labelledby="offers-tab">
+                              
+                            <!--Posted offers-->
+                            <div class="row g-2 mt-2">                               
+                                <div class="col p-2 border ">
+                                    
+                                    <div class="row m-2">
+                                        <div class="col col-sm-5">
+                                            <h5 class="text-danger">Appels d'offres publiés</h5>
+                                        </div>
+                                        <!--Search textbox-->
+                                        <div class="col-3 justify-content-end p-2 m-2">
+                                            <input class="form-control" id="searchOffer1" type="text" placeholder="Rechercher...">
+                                        </div>
+                                        <!--Search textbox-->
+
+                                        <!--Status select filter-->
+                                        <div class="col-3 col-sm-3 justify-content-end p-2 m-2"> 
+                                            <div class="row">
+                                                <span class="p-2">Statut: </span>  
+                                                <select class="form-select" id="selectStatus1" aria-label=".form-select-sm example">
+                                                    <option selected></option></option>
+                                                    <option value="Ouvert">Ouvert</option>
+                                                    <option value="Fermé">Fermé</option>                                                
+                                                </select>
+                                                                                           
+                                            </div>  
+                                        </div>
+                                        <!--Status filter-->                                     
+                                    </div>
+
+                                    <!--Offers table-->
+                                    <div class="row m-2">
+                                        <div class="col ">
+                                            <div class="table-wrapper" >
+                                                <table class="table table-responsive table-bordered table-striped" >
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Organisation</th>
+                                                            <th>Description</th>
+                                                            <th>Catégorie</th>
+                                                            <th>Couverture géographique</th>                                                                                                
+                                                            <th>Date de publication</th>
+                                                            <th>Date de clôture</th>
+                                                            <th>Statut</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="myTable">
+                                                        <tr>
+                                                            <td><a href="#">PADMPME</a></td>
+                                                            <td>Services des prestations d’un prestataire en charge de l’organisation 
+                                                                matérielle (Support) de la formation IP au profit des Femmes 
+                                                                Micro-Entrepreneure</td>
+                                                            <td>Education</td>
+                                                            <td>Mbandaka</td>
+                                                            <td>18-04-2022</td>
+                                                            <td>01-05-2022</td>
+                                                            <td>Ouvert</td>
+                                                            <td><a href="#"><button class="btn btn-primary" type="submit">Postuler</button></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="#">PADMPME</a></td>
+                                                            <td>Services des prestations d’un prestataire en charge de l’organisation 
+                                                                matérielle (Support) de la formation IP au profit des Femmes 
+                                                                Micro-Entrepreneure</td>
+                                                            <td>Entrepreneuriat</td>
+                                                            <td>Kinshasa, Matadi, Bukavu</td>
+                                                            <td>24-04-2022</td>
+                                                            <td>23-05-2022</td>
+                                                            <td>Ouvert</td>
+                                                            <td><a href="#"><button class="btn btn-primary" type="submit">Postuler</button></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="#">TB5</a></td>
+                                                            <td>Conception et réalisation d'un site internet pour le projet OMEGA System.</td>
+                                                            <td>Informatique</td>
+                                                            <td>Kinshasa</td>
+                                                            <td>4-04-2022</td>
+                                                            <td>30-04-2022</td>
+                                                            <td>Fermé</td>
+                                                            <td><a href="#"><button class="btn btn-primary" type="submit">Postuler</button></a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                     <!--Offers table-->
+                                    
+
+                                </div>                                
+                            </div> 
+                            <!--Posted offers-->
+
+                            <!--Applications -->
+                            <div class="row g-2 mt-2">                               
+                                <div class="col p-2 border ">
+                                    
+                                    <div class="row m-2">
+                                        <div class="col col-sm-5">
+                                            <h5 class="text-danger">Candidatures envoyées</h5>
+                                        </div>
+                                        <!--Search textbox-->
+                                        <div class="col-3 justify-content-end p-2 m-2">
+                                            <input class="form-control" id="searchOffer2" type="text" placeholder="Rechercher...">
+                                        </div>
+                                        <!--Search textbox-->
+
+                                        <!--Status select filter-->
+                                        <div class="col-3 col-sm-3 justify-content-end p-2 m-2"> 
+                                            <div class="row">
+                                                <span class="p-2">Statut: </span>  
+                                                <select class="form-select" id="selectStatus2" aria-label=".form-select-sm example">
+                                                    <option selected></option></option>
+                                                    <option value="en cours">En cours</option>
+                                                    <option value="accepté">Acceptée</option> 
+                                                    <option value="rejetée">Rejetée</option>                                                
+                                                </select>
+                                                                                           
+                                            </div>  
+                                        </div>
+                                        <!--Status filter-->                                     
+                                    </div>
+
+                                    <!--Applications table-->
+                                    <div class="row m-2">
+                                        <div class="col ">
+                                            <div class="table-wrapper" >
+                                                <table class="table table-responsive table-bordered table-striped" >
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Organisation</th>
+                                                            <th>Description</th>
+                                                            <th>Catégorie</th>
+                                                            <th>Date d'envoi</th>
+                                                            <th>Statut</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="myTable2">
+                                                        <tr>
+                                                            <td><a href="#">PADMPME</a></td>
+                                                            <td>Services des prestations d’un prestataire en charge de l’organisation 
+                                                                matérielle (Support) de la formation IP au profit des Femmes 
+                                                                Micro-Entrepreneure</td>
+                                                            <td>Education</td>
+                                                            <td>20-04-2022</td>
+                                                            <td>Rejetée</td>
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="#">PADMPME</a></td>
+                                                            <td>Services des prestations d’un prestataire en charge de l’organisation 
+                                                                matérielle (Support) de la formation IP au profit des Femmes 
+                                                                Micro-Entrepreneure</td>
+                                                            <td>Education</td>
+                                                            <td>20-04-2022</td>
+                                                            <td>En cours</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="#">PADMPME</a></td>
+                                                            <td>Services des prestations d’un prestataire en charge de l’organisation 
+                                                                matérielle (Support) de la formation IP au profit des Femmes 
+                                                                Micro-Entrepreneure</td>
+                                                            <td>Informatique</td>
+                                                            <td>20-04-2022</td>
+                                                            <td>Acceptée</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                     <!--Applications table-->
+                                    
+
+                                </div>                                
+                            </div> 
+                            <!--Applications-->
+
+
                         </div>
 
                         <!--Finance tab pane-->
@@ -278,18 +669,62 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-
-        
-
-
+        <script src="script/Js/script.js"></script>
 
         <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
-    
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 
-        <script src="script/Js/script.js"></script>
+        <!--Scripts related to table pagination-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+
+        <!--Script for filters-->
+        <script>
+
+            $(document).ready(function(){
+                //Filter via the search box
+                $("#searchOffer1").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+                $("#searchOffer2").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable2 tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+
+                //Filter via the select element
+                $("#selectStatus1").on("change", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+                $("#selectStatus2").on("change", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable2 tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                }); 
+
+                //Table pagination                
+                $('#myTable').DataTable( {
+                    responsive: true,
+                    "pageLength": 10
+                } );
+            });
+
+            
+        
+        </script>
+        <!--Script for filters-->
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
     </body>

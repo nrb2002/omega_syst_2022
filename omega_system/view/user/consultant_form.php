@@ -5,6 +5,7 @@
   <title>Omega System - Formulaire Consultant</title>
 
   <!-- Favicon icon -->
+
   <link rel="icon" href="assets/images/logo_icon.png" type="image/x-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
@@ -14,9 +15,6 @@
 </head>
 
 <body>
-<!--Navigation bar-->
-<?php //include('../../view/navbar.html')  ?>
-<!--Navigation bar-->
 
 
 <!--PEN HEADER-->
@@ -51,7 +49,9 @@
         <!--form panels-->
         <div class="row">
           <div class="col-sm-10 m-auto">
+
             <form class="multisteps-form__form bg-light" id="form_consultant">
+
 
               <!--single form panel - Infos sur le représentant légal-->
               <div class="multisteps-form__panel shadow p-4 rounded bg-light js-active" data-animation="slideHorz">
@@ -63,21 +63,26 @@
                         <label for="">Nom</label>
                       </div>
                       <div class="col">
+
                         <input class="multisteps-form__input form-control" name="nom_consultant" id="nom_consultant" type="text" placeholder="Votre nom de famille"/>
+
                       </div>                      
                     </div>
                     <div class="col-12 col-sm-4 mt-0 mt-sm-0">
                       <label for="">Postnom</label>
+
                       <input class="multisteps-form__input form-control" name="postnom_consultant" id="postnom_consultant" type="text" placeholder="Votre postnom"/>
                     </div>
                     <div class="col-12 col-sm-4 mt-0 mt-sm-0">
                       <label for="">Prénom</label>
                       <input name="prenom_consultant" id="prenom_consultant" class="multisteps-form__input form-control" type="text" placeholder="Votre prénom"/>
+
                     </div>                    
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Lieu de Naissance</label>
+
                       <input class="multisteps-form__input form-control" name="lieunaiss" id="lieunaiss" type="text" placeholder="Ville, Pays"/>
                     </div>
                     <div class="col-10 col-sm-3 mt-4 mt-sm-0">
@@ -88,6 +93,7 @@
                       <label for="">Sexe</label>
                       <select class="multisteps-form__select form-control" name="sexe" id="sexe">
                         <option selected="selected" value="">...</option>
+
                         <option>M</option>
                         <option>F</option>
                       </select>
@@ -96,8 +102,10 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm-4">
                       <label for="">Etat Civil</label>
+
                       <select class="multisteps-form__select form-control" name="etatcivil" id="etatcivil">
                         <option selected="selected" value="">...</option>
+
                         <option>Célibataire</option>
                         <option>Marié(e)</option>
                         <option>Divorcé(e)</option>
@@ -106,6 +114,7 @@
                     </div>
                     <div class="col-10 col-sm-3">
                       <label for="">Nombre d'enfants</label>
+
                       <input class="multisteps-form__input form-control" name="nbreenfant" id="nbreenfant" type="number"/>
                     </div>
                     <div class="col-10 col-sm-5 mt-4 mt-sm-0">
@@ -113,6 +122,7 @@
                       <select class="multisteps-form__select form-control" name="nationalite" id="nationalite">
                         <option selected="selected" value="">Sélectionnez un pays...</option>
                         <option value="congolaise RDC">Congo, RD</option>
+
                       </select>
                     </div>             
                   </div>
@@ -120,27 +130,34 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm-5 mt-4 mt-sm-0">
                       <label for="">Numéro de téléphone (Inclure l'indicatif)</label>
+
                       <input class="multisteps-form__input form-control" name="telephone_consultant" id="telephone_consultant" type="text" placeholder="ex: +243-855555555"/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Adresse email</label>
                       <input class="multisteps-form__input form-control" name="email_consultant" id="email_consultant" type="email" placeholder="ex: dummy@dummy.com"/>
+
                     </div>             
                   </div>
                   <br><hr>
                   <div class="form-row mt-4">                    
                     <div class="col-10 col-sm mt-4 mt-sm">
                       <label for="">Adresse Domicile</label>                      
-                      <input class="multisteps-form__input form-control" name="adresse_consultant" id="adresse_consultant" type="text" placeholder="rue/avenue, numéro parcellaire, quartier/cité, commune/territoire/village"/>
+
+                      <input class="multisteps-form__input form-control" type="text" placeholder="rue/avenue/bloc"/>
+                      <input class="multisteps-form__input form-control" type="text" placeholder="numéro parcellaire/appartement"/>
+                      <input class="multisteps-form__input form-control" type="text" placeholder="quartier/cité"/>
+                      <input class="multisteps-form__input form-control" type="text" placeholder="commune/territoire"/>
                     </div>                             
                   </div>
-                  <div class="form-row mt-4">                    
+                  <div class="form-row ">                    
                     <div class="col-10 col-sm mt-0 mt-sm">
-                      <input class="multisteps-form__input form-control" name="ville_consultant" id="ville_consultant" type="text" placeholder="Ville"/>
+                      <input class="multisteps-form__input form-control" type="text" placeholder="ville/village"/>
                     </div>
                     <div class="col-10 col-sm mt-0 mt-sm">
-                      <select class="multisteps-form__select form-control" name="pays_consultant" id="pays_consultant">
-                        <option selected="selected" value="">Sélectionnez un pays...</option>
+                      <select class="multisteps-form__select form-control">
+                        <option selected="selected">Sélectionnez un pays...</option>
+
                         <option>Congo, RD</option>
                       </select>
                     </div>                             
@@ -148,19 +165,29 @@
                   <br><hr>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-7">
-                      <label for="">Spécialité</label>
-                      <input class="multisteps-form__input form-control" type="text" name="specialite" id="specialite"  />
+
+                      <label for="">Fonction</label>
+                      <select class="multisteps-form__select form-control">
+                        <option selected="selected">Sélectionnez une fonction...</option>
+                        <option>PDG</option>
+                        <option>Gérant</option>
+                        <option>Fondateur</option>
+                        <option>Consultant</option>
+                      </select>
                     </div>
                     <div class="col-10 col-sm">
                       <label for="">Années d'expérience dans le secteur</label>
-                      <input class="multisteps-form__input form-control" type="number" name="experience" id="experience" />
+                      <input class="multisteps-form__input form-control" type="number" value="0"/>
+
                     </div>                    
                   </div> 
                   <br><hr>               
                   
                   <!--Navigation button-->
                   <div class="button-row d-flex mt-4">
+
                     <button onclick="validation_phase1()" class="btn btn-primary ml-auto js-btn-next" id="btn_suivant1" type="button" title="Next">Suivant</button>
+
                   </div>
                 </div>
               </div>
@@ -173,6 +200,7 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Formation 1</label>
+
                       <input class="multisteps-form__input form-control" name="formation_un" id="formation_un" type="text" placeholder="Saisissez le domaine de formation"/>
                     </div>
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
@@ -182,26 +210,32 @@
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
                       <label for="">Fin</label>
                       <input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />
+
                     </div>                                       
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-5 mt-sm-0">
                       <label for="">Certificat/Diplôme obtenu</label>
+
                       <input class="multisteps-form__input form-control" name="etude_un" id="etude_un" type="text" placeholder="Saisissez votre orientation"/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Ecole/Université</label>
                       <input class="multisteps-form__input form-control" name="institut_etude_un" id="institut_etude_un" type="text" placeholder="Saisissez l'institution de formation"/>
+
                     </div> 
                     <div class="col-12 col-sm">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
+
                         <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary ">                   
+
                       </div>
                     </div>                                                          
                   </div>
                   <br><hr>
                   <div class="form-row mt-4">
+
                   <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Formation 1</label>
                       <input class="multisteps-form__input form-control" name="formation_deux" id="formation_deux" type="text" placeholder="Saisissez le domaine de formation"/>
@@ -213,20 +247,24 @@
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
                       <label for="">Fin</label>
                       <input class="multisteps-form__input form-control" name="datefin_formation_deux" id="datefin_formation_deux" type="date" />
+
                     </div>                                       
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-5 mt-sm-0">
                       <label for="">Certificat/Diplôme obtenu</label>
+
                       <input class="multisteps-form__input form-control" name="etude_deux" id="etude_deux" type="text" placeholder="Saisissez votre orientation"/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Ecole/Université</label>
                       <input class="multisteps-form__input form-control" name="institut_etude_deux" id="institut_etude_deux" type="text" placeholder="Saisissez l'institution de formation"/>
+
                     </div> 
                     <div class="col-12 col-sm">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
+
                         <input type="file" name="etude_deux_piece" id="etude_deux_piece" class="btn btn-primary ">                   
                       </div>
                     </div>                                           
@@ -244,11 +282,13 @@
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
                       <label for="">Fin</label>
                       <input class="multisteps-form__input form-control" name="datefin_formation_trois" id="datefin_formation_trois" type="date" />
+
                     </div>                                       
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-5 mt-sm-0">
                       <label for="">Certificat/Diplôme obtenu</label>
+
                       <input class="multisteps-form__input form-control" name="etude_trois" id="etude_trois" type="text" placeholder="Saisissez votre orientation"/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
@@ -261,6 +301,7 @@
                         <input type="file" name="etude_trois_piece" id="etude_trois_piece" class="btn btn-primary ">                   
                       </div>
                     </div>                                       
+
                   </div>
                   <br><hr>
 
@@ -284,6 +325,7 @@
                   <div class="form-row mt-4">                    
                     <div class="col-12 col-sm-4 mt-0 mt-sm-0">
                       <label for="">Personne 1</label>
+
                       <input class="multisteps-form__input form-control" name="noms_personne_un" id="noms_personne_un" type="text" placeholder="Nom complet de la personne"/>
                     </div>
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
@@ -293,21 +335,25 @@
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Fonction</label>
                       <input class="multisteps-form__input form-control" name="fonction_personne_un" id="fonction_personne_un" type="text" placeholder="Saisissez la fonction"/>
+
                     </div>                                                          
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Téléphone</label>
+
                       <input class="multisteps-form__input form-control" name="telephone_personne_un" id="telephone_personne_un" type="text" placeholder="ex: +243-800000000"/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Adresse électronique</label>
                       <input class="multisteps-form__input form-control" name="email_personne_un" id="email_personne_un" type="email" placeholder="Saisissez l'adresse email"/>
+
                     </div>
                   </div>
                   <br><hr>
                   <div class="form-row mt-4">                    
                     <div class="col-12 col-sm-4 mt-0 mt-sm-0">
+
                     <label for="">Personne 2</label>
                       <input class="multisteps-form__input form-control" name="noms_personne_deux" id="noms_personne_deux" type="text" placeholder="Nom complet de la personne"/>
                     </div>
@@ -318,21 +364,25 @@
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Fonction</label>
                       <input class="multisteps-form__input form-control" name="fonction_personne_deux" id="fonction_personne_deux" type="text" placeholder="Saisissez la fonction"/>
+
                     </div>                                                          
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Téléphone</label>
+
                       <input class="multisteps-form__input form-control" name="telephone_personne_deux" id="telephone_personne_deux" type="text" placeholder="ex: +243-800000000"/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Adresse électronique</label>
                       <input class="multisteps-form__input form-control" name="email_personne_deux" id="email_personne_deux" type="email" placeholder="Saisissez l'adresse email"/>
+
                     </div>
                   </div>
                   <br><hr>
                   <div class="form-row mt-4">                    
                     <div class="col-12 col-sm-4 mt-0 mt-sm-0">
+
                     <label for="">Personne 3</label>
                       <input class="multisteps-form__input form-control" name="noms_personne_trois" id="noms_personne_trois" type="text" placeholder="Nom complet de la personne"/>
                     </div>
@@ -343,16 +393,19 @@
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Fonction</label>
                       <input class="multisteps-form__input form-control" name="fonction_personne_trois" id="fonction_personne_trois" type="text" placeholder="Saisissez la fonction"/>
+
                     </div>                                                          
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Téléphone</label>
+
                       <input class="multisteps-form__input form-control" name="telephone_personne_trois" id="telephone_personne_trois" type="text" placeholder="ex: +243-800000000"/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Adresse électronique</label>
                       <input class="multisteps-form__input form-control" name="email_personne_un" id="email_personne_trois" type="email" placeholder="Saisissez l'adresse email"/>
+
                     </div>
                   </div>
                   <br><hr>                                                           
@@ -362,7 +415,9 @@
                 <div class="row">                    
                   <div class="button-row d-flex mt-4 col-12">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+
                     <button id="btn_suivant2" onclick="validation_phase2()" class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+
                   </div>
                 </div>
               </div>
@@ -374,8 +429,10 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm">
                       <label for="">Nom de la Banque</label>
+
                       <select class="multisteps-form__select form-control" name="nom_banque" id="nom_banque">
                         <option selected="selected" value="">Sélectionnez une banque...</option>
+
                         <option>BCC</option>
                         <option>Equitity BCDC</option>
                         <option>RawBank</option>
@@ -389,16 +446,20 @@
                     </div>
                     <div class="col-10 col-sm-2">
                       <label for="">Code SWIFT</label>
+
                       <input class="multisteps-form__input form-control" name="codeswift" id="codeswift" type="text" placeholder="Code SWIFT"/>
                     </div>
                     <div class="col-10 col-sm-6">
                       <label for="">Numéro de Compte</label>
                       <input class="multisteps-form__input form-control" name="num_compte" id="num_compte" type="text" placeholder="0000-00000-0000-0000000-00"/>
+
                     </div>                  
                 </div>
                 <div class="button-row d-flex mt-4">
                   <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+
                   <button onclick="validation_phas3()" id="btn_suivant3" class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+
                 </div>
               </div>
             </div>
@@ -430,13 +491,17 @@
                       <label for="">J'ai lu et j'accepte.</label>
                     </div>
                     <div class="col-10 col-sm-1">
+
                       <input class="form-check-input" type="checkbox" id="check_terme" name="option1" value="something" unchecked required>
+
                     </div>
                     
                   </div>
                   <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+
                     <button class="btn btn-success ml-auto" type="submit" title="Send">Soumettre</button>
+
                   </div>
                 </div>
               </div>
@@ -448,11 +513,6 @@
     </div>
   </div>
 </div>
-
-
-<!-- footer -->
-<?php //include('../footer.html') ?>
-<!-- footer -->
 
 <!-- Javascript -->
 
@@ -525,4 +585,5 @@
 </script>
 
 </body>
+
 </html>
