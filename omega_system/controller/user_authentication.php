@@ -17,10 +17,11 @@ if(isset($_POST['mdp'])){
     }else{
         $utilisateur=new utilisateur(); $utilisateur->get_data_user(); $utilisateur->set_data_user();
         if($utilisateur->denom_user<>" "){
-            echo "kitoko";
+            
             $_SESSION['etat']='c4a42871f05bd4581f034c0fac2353ed';
             $_SESSION['nomuser']=$utilisateur->denom_user;
         }else{
+            echo "kitoko";
             $msg="Login ou mot de passe incorrect";
             include_once('view/user/user_login.php');
         }
