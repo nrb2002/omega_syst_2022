@@ -33,7 +33,7 @@ if(isset($_GET['access'])){
     include_once('view/user/'.$page.'.php');
 }else{
     if($_SESSION['etat']=='c4a42871f05bd4581f034c0fac2353ed'){
-        if($utilisateur->user_categorie=="ENTREPRISE"){
+        if($utilisateur->user_categorie=="pdg"){
             include_once('view/user/user_dashboard.php');
         }else{
             include_once('view/user/user_dashboard2.php');

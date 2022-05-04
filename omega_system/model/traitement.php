@@ -26,7 +26,7 @@
             $nbr_user=mysqli_num_rows($result);
             if($nbr_user>0){
                 $this->denom_user=$tab_user['denom'];
-                $this->user_categorie=$tab_user['categorie'];
+                $this->user_categorie=$tab_user['Fonction_ID'];
             }else{
                 $this->denom_user=" ";
 
