@@ -17,6 +17,7 @@ if(isset($_POST['mdp'])){
     }else{
         $utilisateur=new utilisateur(); $utilisateur->get_data_user(); $utilisateur->set_data_user();
         if($utilisateur->denom_user<>" "){
+            echo "kitoko";
             $_SESSION['etat']='c4a42871f05bd4581f034c0fac2353ed';
             $_SESSION['nomuser']=$utilisateur->denom_user;
         }else{
