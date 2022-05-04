@@ -21,13 +21,14 @@
         // interaction avec la base de données
         function set_data_user(){
             include_once('model/cnx.php'); // acces à la base de données 
-            $req_user="SELECT * FROM `omega_user`,omega_entreprise WHERE omega_user.IDUser=omega_entreprise.User_ID and omega_user.CodeUser='$this->login' and omega_user.PassUser='$this->psw_user' ";
-            $result=$conx->query($req_user) or die();
+            $req_user="SELECT * FROM `omega_user`,`omega_entreprise` WHERE omega_user.IDUser=omega_entreprise.User_ID and omega_user.CodeUser='$this->login_user' and omega_user.PassUser='$this->psw_user' ";
+            $result=$conx->query($req_user) or mysqli_error();
             $tab_user=mysqli_fetch_assoc($result); // affectation de resultat de la requette dans une table associative
             $nbr_user=mysqli_num_rows($result); // Compteur de nombre d'éléments trouvés
+            
             if($nbr_user>0){ // vérification du compteur si supérieur à zéro
             // Affectation du nom et fonction dans des variables de la class utilisateur
-                $this->denom_user=$tab_user['denom'];
+                $this->denom_user=$tab_user['NomUser'];
                 $this->user_categorie=$tab_user['Fonction_ID'];
             }else{
             // initialisation de variable sinon
