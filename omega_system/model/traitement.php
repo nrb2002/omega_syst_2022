@@ -29,7 +29,6 @@
                 $this->user_categorie=$tab_user['Fonction_ID'];
             }else{
                 $this->denom_user=" ";
-
             }
         }
 
