@@ -144,18 +144,18 @@
                     <div class="col-10 col-sm mt-4 mt-sm">
                       <label for="">Adresse Domicile</label>                      
 
-                      <input class="multisteps-form__input form-control" type="text" placeholder="rue/avenue/bloc"/>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="numéro parcellaire/appartement"/>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="quartier/cité"/>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="commune/territoire"/>
+                      <input class="multisteps-form__input form-control" type="text" name="avenue" id="avenue" placeholder="rue/avenue/bloc"/>
+                      <input class="multisteps-form__input form-control" type="text" name="numparcelle" id="numparcelle" placeholder="numéro parcellaire/appartement"/>
+                      <input class="multisteps-form__input form-control" type="text" name="quartier" id="quartier" placeholder="quartier/cité"/>
+                      <input class="multisteps-form__input form-control" type="text" name="commune" id="commune" placeholder="commune/territoire"/>
                     </div>                             
                   </div>
                   <div class="form-row ">                    
                     <div class="col-10 col-sm mt-0 mt-sm">
-                      <input class="multisteps-form__input form-control" type="text" placeholder="ville/village"/>
+                      <input class="multisteps-form__input form-control" name="ville" id="ville" type="text" placeholder="ville/village"/>
                     </div>
                     <div class="col-10 col-sm mt-0 mt-sm">
-                      <select class="multisteps-form__select form-control">
+                      <select class="multisteps-form__select form-control" name="pays_consultant" id="pays_consultant">
                         <option selected="selected">Sélectionnez un pays...</option>
 
                         <option>Congo, RD</option>
@@ -167,7 +167,7 @@
                     <div class="col-12 col-sm-7">
 
                       <label for="">Fonction</label>
-                      <select class="multisteps-form__select form-control">
+                      <select class="multisteps-form__select form-control" name="fonction_consultant" id="fonction_consultant" >
                         <option selected="selected">Sélectionnez une fonction...</option>
                         <option>PDG</option>
                         <option>Gérant</option>
@@ -177,7 +177,7 @@
                     </div>
                     <div class="col-10 col-sm">
                       <label for="">Années d'expérience dans le secteur</label>
-                      <input class="multisteps-form__input form-control" type="number" value="0"/>
+                      <input class="multisteps-form__input form-control" name="annexperience" id="annexperience"  type="number" value="0"/>
 
                     </div>                    
                   </div> 
@@ -237,7 +237,7 @@
                   <div class="form-row mt-4">
 
                   <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Formation 1</label>
+                      <label for="">Formation 2</label>
                       <input class="multisteps-form__input form-control" name="formation_deux" id="formation_deux" type="text" placeholder="Saisissez le domaine de formation"/>
                     </div>
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
@@ -330,7 +330,7 @@
                     </div>
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Organisation/Entreprise</label>
-                      <input class="multisteps-form__input form-control" name="organisatio_personne_un" id="organisatio_personne_un" type="text" placeholder="Nom de l'organisation"/>
+                      <input class="multisteps-form__input form-control" name="organisation_personne_un" id="organisation_personne_un" type="text" placeholder="Nom de l'organisation"/>
                     </div>
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Fonction</label>
@@ -359,7 +359,7 @@
                     </div>
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Organisation/Entreprise</label>
-                      <input class="multisteps-form__input form-control" name="organisatio_personne_deux" id="organisatio_personne_deux" type="text" placeholder="Nom de l'organisation"/>
+                      <input class="multisteps-form__input form-control" name="organisation_personne_deux" id="organisation_personne_deux" type="text" placeholder="Nom de l'organisation"/>
                     </div>
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Fonction</label>
@@ -388,7 +388,7 @@
                     </div>
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Organisation/Entreprise</label>
-                      <input class="multisteps-form__input form-control" name="organisatio_personne_trois" id="organisatio_personne_trois" type="text" placeholder="Nom de l'organisation"/>
+                      <input class="multisteps-form__input form-control" name="organisation_personne_trois" id="organisatio_personne_trois" type="text" placeholder="Nom de l'organisation"/>
                     </div>
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Fonction</label>

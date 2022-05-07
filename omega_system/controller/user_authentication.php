@@ -20,11 +20,9 @@ if(isset($_POST['mdp'])){
         $utilisateur->set_data_user();
         
         if($utilisateur->denom_user<>" "){
-            echo "kitoko 1";
             $_SESSION['etat']='c4a42871f05bd4581f034c0fac2353ed';
             $_SESSION['nomuser']=$utilisateur->denom_user;
         }else{
-            echo "kitoko";
             $msg="Login ou mot de passe incorrect";
             include_once('view/user/user_login.php');
         }
@@ -50,5 +48,7 @@ if(isset($_GET['access'])){
         session_destroy();
     }
 }
+
+
 
 ?>

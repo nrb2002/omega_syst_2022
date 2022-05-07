@@ -124,11 +124,11 @@
                     <div class="col-10 col-sm">
                       <label for="">Chiffre d'affaires annuel (en USD)</label>
 
-                      <input class="multisteps-form__input form-control" type="number" name="ca" id="ca" required/>
+                      <input class="multisteps-form__input form-control" type="number" name="chifreaffaire" id="chifreaffaire" required/>
                     </div>
                     <div class="col-10 col-sm">
                       <label for="">Capital social (en USD)</label>
-                      <input class="multisteps-form__input form-control" type="number" name="cs" id="cs" required/>
+                      <input class="multisteps-form__input form-control" type="number" name="capitalsocial" id="capitalsocial" required/>
                     </div>
                     <div class="col-10 col-sm-4">
                       <label for="">Secteur d'activités</label>
@@ -205,144 +205,6 @@
                   </div>
 
                   <br><hr>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Autorisation d'ouverture</label>
-                      <select class="multisteps-form__select form-control" name="autorisation" id="autorisation" required>
-                        <option selected="selected" value="">...</option>
-                        <option>Oui</option>
-                        <option>Non</option>
-                      </select>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="autorisation_piece" id="autorisation_piece" class="btn btn-primary">                    
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Identification Nationale</label>
-                      <input class="multisteps-form__input form-control" name="idnat" id="idnat" type="text" placeholder="Numéro d'Identification Nationale"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="idnat_piece" id="idnat_piece" class="btn btn-primary">                       
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">RCCM.</label>
-                      <input class="multisteps-form__input form-control" name="rccm" id="rccm" type="text" placeholder="Numéro d'Identification Nationale"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="rccm_piece" id="rccm_piece" class="btn btn-primary">                        
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Impôt</label>
-                      <input class="multisteps-form__input form-control" name="numimpot" id="numimpot" type="text" placeholder="Numéro Impôt"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="impot_piece" id="impot_piece" class="btn btn-primary">                          
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Assurance</label>
-                      <input class="multisteps-form__input form-control" name="assurance" id="assurance" type="text" placeholder="Police d'Assurance"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="assurance_piece" id="assurance_piece" class="btn btn-primary">                           
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">CNSS</label>
-                      <input class="multisteps-form__input form-control" name="cnss" id="cnss" type="text" placeholder="Numéro CNSS"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="cnss_piece" id="cnss_piece" class="btn btn-primary">                        
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">INPP</label>
-                      <input class="multisteps-form__input form-control" name="inpp"  id="inpp" type="text" placeholder="Numéro INPP"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="inpp_piece" id="inpp_piece" class="btn btn-primary">                        
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">ONEM</label>
-                      <input class="multisteps-form__input form-control" name="onem" id="onem" type="text" placeholder="Numéro ONEM"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="onem_piece" id="onem_piece" class="btn btn-primary">                        
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Agrément</label>
-                      <input class="multisteps-form__input form-control" name="agrement" id="agrement" type="text" placeholder="Numéro Agrément"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="agrement_piece" id="agrement_piece" class="btn btn-primary">                         
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">F92</label>
-                      <input class="multisteps-form__input form-control" name="f92" id="f92" type="text" placeholder="Numéro du F92"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="f92_piece" id="f92_piece" class="btn btn-primary">                       
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Attestation Fiscale</label>
-                      <input class="multisteps-form__input form-control" name="attestation_fiscale" id="attestation_fiscale" type="text" placeholder="Numéro d'Attestation Fiscale"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="attestation_piece" id="attestation_piece" class="btn btn-primary">                         
-                      </div>
-                    </div>                   
-                  </div>                
-                  <br><hr>
-                  
 
                   <!--Navigation buttons-->
                   <div class="button-row d-flex mt-4">
@@ -599,9 +461,7 @@
                       <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
                     </div>
                   </div>
-
                 </div>
-              </div>  
 
               <!--single form panel - Coordonnées bancaires-->
               <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
@@ -642,145 +502,143 @@
               </div>
             </div>
 
-                     
-
-               <!--single form panel - Attachments-->
-               <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
+            <!--single form panel - Attachments-->
+            <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
                 <h3 class="multisteps-form__title">Pièces jointes</h3>
                 <div class="multisteps-form__content">                  
-                  <div class="form-row mt-4 text-left">
-                    <div class="col-8">
-                      <span for="">Autorisation d'ouverture</span>
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">...</option>
+                <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <label for="">Autorisation d'ouverture</label>
+                      <select class="multisteps-form__select form-control" name="autorisation" id="autorisation" required>
+                        <option selected="selected" value="">...</option>
                         <option>Oui</option>
                         <option>Non</option>
                       </select>
-                    </div>                   
-                    <div class="col">
+                    </div> 
+                    <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="autorisation_piece" id="autorisation_piece" class="btn btn-primary">                    
                       </div>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-6">
                       <label for="">Identification Nationale</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Numéro d'Identification Nationale"/>
+                      <input class="multisteps-form__input form-control" name="idnat" id="idnat" type="text" placeholder="Numéro d'Identification Nationale"/>
                     </div> 
                     <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="idnat_piece" id="idnat_piece" class="btn btn-primary">                       
                       </div>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-6">
-                      <label for="">Id. Nat.</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Numéro d'Identification Nationale"/>
+                      <label for="">RCCM.</label>
+                      <input class="multisteps-form__input form-control" name="rccm" id="rccm" type="text" placeholder="Numéro d'Identification Nationale"/>
                     </div> 
                     <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="rccm_piece" id="rccm_piece" class="btn btn-primary">                        
                       </div>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-6">
                       <label for="">Impôt</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Numéro Impôt"/>
+                      <input class="multisteps-form__input form-control" name="numimpot" id="numimpot" type="text" placeholder="Numéro Impôt"/>
                     </div> 
                     <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="impot_piece" id="impot_piece" class="btn btn-primary">                          
                       </div>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-6">
                       <label for="">Assurance</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Police d'Assurance"/>
+                      <input class="multisteps-form__input form-control" name="assurance" id="assurance" type="text" placeholder="Police d'Assurance"/>
                     </div> 
                     <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="assurance_piece" id="assurance_piece" class="btn btn-primary">                           
                       </div>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-6">
                       <label for="">CNSS</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Numéro CNSS"/>
+                      <input class="multisteps-form__input form-control" name="cnss" id="cnss" type="text" placeholder="Numéro CNSS"/>
                     </div> 
                     <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="cnss_piece" id="cnss_piece" class="btn btn-primary">                        
                       </div>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-6">
                       <label for="">INPP</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Numéro INPP"/>
+                      <input class="multisteps-form__input form-control" name="inpp"  id="inpp" type="text" placeholder="Numéro INPP"/>
                     </div> 
                     <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="inpp_piece" id="inpp_piece" class="btn btn-primary">                        
                       </div>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-6">
                       <label for="">ONEM</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Numéro ONEM"/>
+                      <input class="multisteps-form__input form-control" name="onem" id="onem" type="text" placeholder="Numéro ONEM"/>
                     </div> 
                     <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="onem_piece" id="onem_piece" class="btn btn-primary">                        
                       </div>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-6">
                       <label for="">Agrément</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Numéro Agrément"/>
+                      <input class="multisteps-form__input form-control" name="agrement" id="agrement" type="text" placeholder="Numéro Agrément"/>
                     </div> 
                     <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="agrement_piece" id="agrement_piece" class="btn btn-primary">                         
                       </div>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-6">
                       <label for="">F92</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Numéro du F92"/>
+                      <input class="multisteps-form__input form-control" name="f92" id="f92" type="text" placeholder="Numéro du F92"/>
                     </div> 
                     <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="f92_piece" id="f92_piece" class="btn btn-primary">                       
                       </div>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-6">
                       <label for="">Attestation Fiscale</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Numéro d'Attestation Fiscale"/>
+                      <input class="multisteps-form__input form-control" name="attestation_fiscale" id="attestation_fiscale" type="text" placeholder="Numéro d'Attestation Fiscale"/>
                     </div> 
                     <div class="col-12 col-sm-6">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
+                      <input type="file" name="attestation_piece" id="attestation_piece" class="btn btn-primary">                         
                       </div>
                     </div>                   
                   </div>  
@@ -793,19 +651,36 @@
                   </div>
                 </div>
               
-
-
+                
               <!--single form panel - Termes et conditions-->
               <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
                 <h3 class="multisteps-form__title">Termes et conditions</h3>
                 <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="col-10 col-sm-10 m-auto">
+                      <ol>
+                        <li>Les données recueillies restent sous la responsabilité administrative de OMEGA System qui prend en charge leur sécurisation dans les limites de ses ressources et de ses capacités.</li>
+                        <br><li>OMEGA System s’engage à apporter tout le soin nécessaire à la protection des données personnelles et des entreprises soumises à travers son système.</li>
+                        <br><li>Les obligations financières des utilisateurs qui découlent de l’utilisation des ressources nécessaires pour accéder à OMEGA System sont pleinement la responsabilité de l’utilisateur.</li>
+                        <br><li>Toute manipulation engagée par l’utilisateur au-delà des présents termes et conditions d’utilisation sont sous la responsabilité de l’utilisateur de OMEGA System. Il appartient donc à l’utilisateur de prendre les mesures nécessaires à la sécurisation de ses appareils lors de sa connexion à OMEGA System.</li>
+                        <br><li>OMEGA System n’est pas responsable des dommages causés par le mauvais état du matériel appartenant à l’utilisateur ou dus à l’inobservation par l’utilisateur de l’une de ses obligations prévues à l’article 4 ci-dessus, et à l’inobservation des règles d’Hygiène et de Sécurité.</li>
+                        <br><li>Chaque partie est tenue au secret professionnel à l’égard des tiers, non seulement sur les activités de l’autre partie touchant au domaine des travaux prévus par le présent contrat, mais encore sur les autres activités de l’autre partie dont elle a pu avoir connaissance à l’occasion de l’exécution de ce contrat.</li>
+                        <br><li>Chaque partie ne pourra faire de publications ou communications écrites ou orales relatives aux travaux ou aux activités de l’autre partie dont elle a pu avoir connaissance lors de l’exécution du présent contrat, qu’après autorisation préalable écrite de l’autre partie.</li>
+                        <br><li>Dans le cas où le demandeur aurait vu ses données compromis pour des raisons qui dépassent le contrôle de OMEGA System, l’utilisateur ne pourra réclamer à OMEGA System ni indemnité ni remboursement des sommes déboursées pour la production de ces données pour autant que les stipulations du précédent article 4 auront été respectées, étant bien entendu que OMEGA System ne peut garantir une sécurité sans failles du côté de l’hébergeur.</li>
+                        <br><li>Pour toutes les contestations relatives à l’interprétation ou à l’exécution du présent contrat, le Droit applicable est le Droit Congolais.</li>
+                        <br><li>S’il survient un litige relatif à l’interprétation ou à l’exécution du contrat, OMEGA System tentera d’abord de rechercher une solution à l’amiable avant tout recours aux Tribunaux Congolais spécialisé en la matière.</li>
+                      </ol>
+                    </div>
+                  </div> 
+                  <hr>                     
+                  
                   <div class="form-row mt-4 border m-auto">                    
-                    <div class="col-10 col-sm-6">
-
-                      <label for="">J'ai lu et j'accepte les <a href="index.php?load=conditions" target="_blank">termes et conditions</a></label>
+                    <div class="col-10 col-sm-3">
+                      <label for="">J'ai lu et j'accepte.</label>
                     </div>
                     <div class="col-10 col-sm-1">
-                      <input class="form-check-input" type="checkbox" id="check_terme" name="check_terme" value="something" unchecked required>
+
+                      <input class="form-check-input" type="checkbox" id="check_terme" name="option1" value="something" unchecked required>
 
                     </div>
                     
@@ -818,14 +693,14 @@
                   </div>
                 </div>
               </div>
-              
             </form>
-          </div>
+            </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+   
 
 
 <!-- partial -->
