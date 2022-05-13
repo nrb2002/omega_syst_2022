@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Omega System - Enregistrement Entreprise</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Omega System - Enregistrement Entreprise</title>
 
-  <link rel="icon" href="../../assets/images/logo_icon.png" type="image/x-icon">
+    <link rel="icon" href="../../assets/images/logo_icon.png" type="image/x-icon">
 
+<<<<<<< Updated upstream
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="../../script/Css/style.css">
@@ -21,6 +22,20 @@
   <h2 class="header__title">Formulaire d'enregistrement d'Entreprise</h2>
   <button class="btn btn-outline-success btn-lg" onclick="clearTextBoxes()">Réinitialiser</button>
 </header>
+=======
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../script/Css/style.css">
+    <link rel="stylesheet" href="../../script/Css/B_stylepage.css">
+
+  </head>
+<body> 
+  <!--PEN HEADER-->
+  <header class="header">
+    <h2 class="header__title">Formulaire d'enregistrement d'Entreprise</h2>
+    <button class="btn btn-outline-success btn-lg" onclick="clearTextBoxes()">Réinitialiser</button>
+  </header>
+>>>>>>> Stashed changes
 
 <!--PEN CONTENT     -->
 <div class="content">
@@ -192,7 +207,11 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Nom</label>
+<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" type="text" placeholder="Votre nom de famille"/>
+=======
+                      <input class="multisteps-form__input form-control" name="nom_representant" id="nom_representant" type="text" placeholder="Votre nom de famille"/>
+>>>>>>> Stashed changes
                     </div>
                     <div class="col-10 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Postnom</label>
@@ -635,19 +654,82 @@
 <!-- footer -->
 
 <!-- partial -->
+<<<<<<< Updated upstream
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
 
   <script src="../../script/Js/script.js"></script>
+=======
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></>
+  <script src="../../script/Js/script.js"></>
+>>>>>>> Stashed changes
 
   <script>
     function clearTextBoxes(){
-    var elements = document.getElementsByTagName("input");
-    for (var ii=0; ii < elements.length; ii++) {
-      if (elements[ii].type == "text" || elements[ii].type == "email" || elements[ii].type == "number" || elements[ii].type == "date") {
-        elements[ii].value = "";
+      var elements = document.getElementsByTagName("input");
+      for (var ii=0; ii < elements.length; ii++) {
+        if (elements[ii].type == "text" || elements[ii].type == "email" || elements[ii].type == "number" || elements[ii].type == "date") {
+          elements[ii].value = "";
+        }
       }
     }
+<<<<<<< Updated upstream
   }
+=======
+    
+    function validation_phase1(){
+      var form_inscription=document.getElementById('form_inscription');
+      var denom_entreprise=document.getElementById('denom_entreprise');
+      var btn_suivant1=document.getElementById('btn_suivant1'); 
+      var sigle=document.getElementById('sigle');
+      var date_create=document.getElementById('date_create');
+      var forme_juridique=document.getElementById('forme_juridique');
+      var rccm=document.getElementById('rccm');
+      var idnat=document.getElementById('idnat');
+      var telephone=document.getElementById('telephone');
+      var email=document.getElementById('email');
+      
+      
+
+      if(denom_entreprise.value=="" || telephone.value=="" || email.value=="" || sigle.value=="" || date_create.value=="" || forme_juridique.value=="" || rccm.value=="" || idnat.value=="" ){
+        alert("Completez toutes les zones obligatoires s'il vous plait")
+        btn_suivant1.classList.remove('js-btn-next')
+      }
+      if(denom_entreprise.value!="" && telephone.value!="" && email.value!="" && sigle.value!="" && date_create.value!="" && forme_juridique.value!="" && rccm.value!="" && idnat.value!="" ){
+        btn_suivant1.classList.add('js-btn-next')
+      }
+    }
+
+    function validation_phase2(){
+      var nom_representant=document.getElementById('nom_representant');
+      var prenom_representant=document.getElementById('prenom_representant');
+      var telephone_representant=document.getElementById('telephone_representant'); 
+      var email_representant=document.getElementById('email_representant');
+      var btn_suivant2=document.getElementById('btn_suivant2');
+
+      if(nom_representant.value=="" || prenom_representant.value=="" || telephone_representant.value=="" || email_representant.value==""){
+        alert("Completez toutes les zones obligatoires du représentant légal s'il vous plait")
+        btn_suivant2.classList.remove('js-btn-next')
+      }
+      if(nom_representant.value!="" && prenom_representant.value!="" && telephone_representant.value!="" && email_representant.value!=""){
+        btn_suivant2.classList.add('js-btn-next')
+      }
+    }
+
+    function validation_phas3(){
+      var nom_banque=document.getElementById('nom_banque');
+      var codeswift=document.getElementById('codeswift');
+      var num_compte=document.getElementById('num_compte'); 
+
+      if(nom_banque.value=="" || codeswift.value=="" || num_compte.value==""){
+        alert("Completez toutes les zones obligatoires des Coordonnées bancaires s'il vous plait")
+        btn_suivant3.classList.remove('js-btn-next')
+      }
+      if(nom_banque.value!="" && codeswift.value!="" && num_compte.value!=""){
+        btn_suivant3.classList.add('js-btn-next')
+      }
+    }
+
+>>>>>>> Stashed changes
   </script>
 
 </body>
