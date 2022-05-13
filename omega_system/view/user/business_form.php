@@ -8,22 +8,22 @@
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-<<<<<<< Updated upstream
   <link rel="stylesheet" href="script/Css/style.css">
   <link rel="stylesheet" href="script/Css/B_stylepage.css">
-=======
-  <link rel="stylesheet" href="../../script/Css/style.css">
-  <link rel="stylesheet" href="../../script/Css/B_stylepage.css">
->>>>>>> Stashed changes
+
 </head>
 <body>
 
   <!--Navigation bar-->
-<<<<<<< Updated upstream
   <?php // include('../navbar.html') ?>
-=======
-  <?php include('../navbar.html') ?>
->>>>>>> Stashed changes
+
+  <link rel="stylesheet" href="script/Css/style.css">
+  <link rel="stylesheet" href="script/Css/B_stylepage.css">
+
+</head>
+<body>
+
+  
 
 <!--PEN HEADER-->
 <header class="header">
@@ -49,14 +49,11 @@
               <button class="multisteps-form__progress-btn js-active" type="button" title="Comments">L'entreprise</button>
               <button class="multisteps-form__progress-btn " type="button" title="User Info">Représentant Légal</button>
               <button class="multisteps-form__progress-btn" type="button" title="Address">Education</button>
-<<<<<<< Updated upstream
               <button class="multisteps-form__progress-btn" type="button" title="Comments">Coordonnées bancaires</button>
               <button class="multisteps-form__progress-btn" type="button" title="Comments">Soumission</button>
-=======
               <button class="multisteps-form__progress-btn" type="button" title="Bank info">Coordonnées bancaires</button>
               <button class="multisteps-form__progress-btn" type="button" title="Attachments">Pièces jointes</button>
               <button class="multisteps-form__progress-btn" type="button" title="Submit">Soumission</button>
->>>>>>> Stashed changes
             </div>
           </div>
         </div>
@@ -64,11 +61,7 @@
         <!--form panels-->
         <div class="row">
           <div class="col-sm-10 m-auto">
-<<<<<<< Updated upstream
             <form class="multisteps-form__form bg-light" method="post" action="index.php" id="form_inscription">
-=======
-            <form class="multisteps-form__form bg-light" >
->>>>>>> Stashed changes
               
               <!--single form panel - Détails sur l'entreprise-->
               <div class="multisteps-form__panel shadow p-4 rounded bg-light js-active" data-animation="slideHorz">
@@ -77,11 +70,7 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Dénomination</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="denom_entreprise" id="denom_entreprise" type="text" placeholder="Nom de l'entreprise en toutes lettres" required/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Nom de l'entreprise en toutes lettres"/>
->>>>>>> Stashed changes
                     </div>
                     <div class="col-10 col-sm-2 mt-4 mt-sm-0">
                       <label for="">Sigle</label>
@@ -89,31 +78,18 @@
                     </div>
                     <div class="col-10 col-sm-3 mt-4 mt-sm-0">
                       <label for="">Date de Création</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="date_create" id="date_create" type="date" required/>
-=======
-                      <input class="multisteps-form__input form-control" type="date" />
->>>>>>> Stashed changes
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <label for="">Objectif</label>
-<<<<<<< Updated upstream
                     <textarea class="multisteps-form__textarea form-control" name="objectif" id="objectif" maxlength=300 placeholder="Decrire brièvement l'objectif de l'entreprise" required></textarea>
-=======
-                    <textarea class="multisteps-form__textarea form-control" maxlength=300 placeholder="Decrire brièvement l'objectif de l'entreprise"></textarea>
->>>>>>> Stashed changes
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm">
-                      <label for="">Type (Forme juridique)</label>
-<<<<<<< Updated upstream
+                      <label for="">Forme juridique</label>
                       <select class="multisteps-form__select form-control" name="forme_juridique" id="forme_juridique" required>
                         <option selected="selected" value="">Sélectionnez la forme juridique</option>
-=======
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez la forme juridique</option>
->>>>>>> Stashed changes
                         <option>Etablissement</option>
                         <option>SARL</option>
                         <option>SA</option>
@@ -123,13 +99,8 @@
                     </div>
                     <div class="col-10 col-sm">
                       <label for="">Catégorie</label>
-<<<<<<< Updated upstream
                       <select class="multisteps-form__select form-control" name="categorie" id="categorie" required>
                         <option selected="selected" value="">Sélectionnez une catégorie</option>
-=======
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez une catégorie</option>
->>>>>>> Stashed changes
                         <option>Freelance</option>
                         <option>Micro-entreprise</option>
                         <option>PME</option>
@@ -141,40 +112,23 @@
                     </div>
                     <div class="col-10 col-sm-3">
                       <label for="">Nombre de travailleurs</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" type="number" name="nbre_travailleurs" id="nbre_travailleurs" required/>
-=======
-                      <input class="multisteps-form__input form-control" type="number" value="1"/>
->>>>>>> Stashed changes
                     </div>
                   </div>                    
                   <br><hr>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm">
                       <label for="">Chiffre d'affaires annuel (en USD)</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" type="number" name="ca" id="ca" required/>
                     </div>
                     <div class="col-10 col-sm">
                       <label for="">Capital social (en USD)</label>
-                      <input class="multisteps-form__input form-control" type="number" name="cs" id="cs" required/>
+                      <input class="multisteps-form__input form-control" type="number" name="capitalsocial" id="capitalsocial" required/>
                     </div>
                     <div class="col-10 col-sm-4">
                       <label for="">Secteur d'activités</label>
                       <select class="multisteps-form__select form-control" name="activite" id="activite" required>
                         <option selected="selected" value="">Sélectionnez un secteur...</option>
-=======
-                      <input class="multisteps-form__input form-control" type="number" />
-                    </div>
-                    <div class="col-10 col-sm">
-                      <label for="">Capital social (en USD)</label>
-                      <input class="multisteps-form__input form-control" type="number" />
-                    </div>
-                    <div class="col-10 col-sm-4">
-                      <label for="">Secteur d'activités</label>
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez un secteur...</option>
->>>>>>> Stashed changes
                         <option>Agro-business</option>
                         <option>Agro-industrie</option>
                         <option>Industrie légère</option>
@@ -190,47 +144,27 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm-5 mt-4 mt-sm-0">
                       <label for="">Numéro de téléphone (Inclure l'indicatif)</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" type="text" placeholder="ex: +243-855555555" name="telephone" id="telephone" required/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Adresse email</label>
                       <input class="multisteps-form__input form-control" name="email" id="email" type="email" placeholder="ex: dummy@dummy.com" required/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="ex: +243-855555555"/>
-                    </div>
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Adresse email</label>
-                      <input class="multisteps-form__input form-control" type="email" placeholder="ex: dummy@dummy.com"/>
->>>>>>> Stashed changes
                     </div>             
                   </div>
                   <br><hr>
                   <div class="form-row mt-4">                    
                     <div class="col-10 col-sm mt-sm">
                       <label for="">Siège social</label>                      
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="siege" id="siege" type="text" placeholder="rue/avenue, numéro parcellaire, quartier/cité, commune/territoire/village" required/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="rue/avenue, numéro parcellaire, quartier/cité, commune/territoire/village"/>
->>>>>>> Stashed changes
                     </div>                             
                   </div>
                   <div class="form-row mt-4">                    
                     <div class="col-10 col-sm mt-0 mt-sm">
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" type="text" name="ville" placeholder="Ville" required/>
                     </div>
                     <div class="col-10 col-sm mt-0 mt-sm">
                       <select class="multisteps-form__select form-control" name="pays" id="pays" required>
                         <option selected="selected" value="">Sélectionnez un pays...</option>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Ville"/>
-                    </div>
-                    <div class="col-10 col-sm mt-0 mt-sm">
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez un pays...</option>
->>>>>>> Stashed changes
                         <option>Congo, RD</option>
                       </select>
                     </div>                             
@@ -239,183 +173,25 @@
                   <div class="form-row mt-4">                    
                     <div class="col-10 col-sm mt-sm">
                       <label for="">Adresse d'exploitation</label>                      
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="adressexploitation" id="adressexploitation" type="text" placeholder="rue/avenue, numéro parcellaire, quartier/cité, commune/territoire/village" required/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="rue/avenue, numéro parcellaire, quartier/cité, commune/territoire/village"/>
->>>>>>> Stashed changes
                     </div>                             
                   </div>
                   <div class="form-row mt-4">                    
                     <div class="col-10 col-sm mt-0 mt-sm">
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="villexploitation" id="villexploitation" type="text" placeholder="Ville"/>
                     </div>
                     <div class="col-10 col-sm mt-0 mt-sm">
                       <select class="multisteps-form__select form-control" name="paysexploitation" id="paysexploitation">
                         <option selected="selected" value="">Sélectionnez un pays...</option>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Ville"/>
-                    </div>
-                    <div class="col-10 col-sm mt-0 mt-sm">
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez un pays...</option>
->>>>>>> Stashed changes
                         <option>Congo, RD</option>
                       </select>
                     </div>                             
                   </div>
-<<<<<<< Updated upstream
                   <br><hr>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Autorisation d'ouverture</label>
-                      <select class="multisteps-form__select form-control" name="autorisation" id="autorisation" required>
-                        <option selected="selected" value="">...</option>
-                        <option>Oui</option>
-                        <option>Non</option>
-                      </select>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="autorisation_piece" id="autorisation_piece" class="btn btn-primary">                    
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Identification Nationale</label>
-                      <input class="multisteps-form__input form-control" name="idnat" id="idnat" type="text" placeholder="Numéro d'Identification Nationale"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="idnat_piece" id="idnat_piece" class="btn btn-primary">                       
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">RCCM.</label>
-                      <input class="multisteps-form__input form-control" name="rccm" id="rccm" type="text" placeholder="Numéro d'Identification Nationale"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="rccm_piece" id="rccm_piece" class="btn btn-primary">                        
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Impôt</label>
-                      <input class="multisteps-form__input form-control" name="numimpot" id="numimpot" type="text" placeholder="Numéro Impôt"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="impot_piece" id="impot_piece" class="btn btn-primary">                          
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Assurance</label>
-                      <input class="multisteps-form__input form-control" name="assurance" id="assurance" type="text" placeholder="Police d'Assurance"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="assurance_piece" id="assurance_piece" class="btn btn-primary">                           
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">CNSS</label>
-                      <input class="multisteps-form__input form-control" name="cnss" id="cnss" type="text" placeholder="Numéro CNSS"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="cnss_piece" id="cnss_piece" class="btn btn-primary">                        
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">INPP</label>
-                      <input class="multisteps-form__input form-control" name="inpp"  id="inpp" type="text" placeholder="Numéro INPP"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="inpp_piece" id="inpp_piece" class="btn btn-primary">                        
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">ONEM</label>
-                      <input class="multisteps-form__input form-control" name="onem" id="onem" type="text" placeholder="Numéro ONEM"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="onem_piece" id="onem_piece" class="btn btn-primary">                        
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Agrément</label>
-                      <input class="multisteps-form__input form-control" name="agrement" id="agrement" type="text" placeholder="Numéro Agrément"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="agrement_piece" id="agrement_piece" class="btn btn-primary">                         
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">F92</label>
-                      <input class="multisteps-form__input form-control" name="f92" id="f92" type="text" placeholder="Numéro du F92"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="f92_piece" id="f92_piece" class="btn btn-primary">                       
-                      </div>
-                    </div>                   
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <label for="">Attestation Fiscale</label>
-                      <input class="multisteps-form__input form-control" name="attestation_fiscale" id="attestation_fiscale" type="text" placeholder="Numéro d'Attestation Fiscale"/>
-                    </div> 
-                    <div class="col-12 col-sm-6">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      <input type="file" name="attestation_piece" id="attestation_piece" class="btn btn-primary">                         
-                      </div>
-                    </div>                   
-                  </div>                
-                  <br><hr>
-                  
 
                   <!--Navigation buttons-->
                   <div class="button-row d-flex mt-4">
                     <button onclick="validation_phase1()" id="btn_suivant1" class="btn btn-primary ml-auto " type="button" title="Next">Suivant</button>
-=======
-                                
-                 
-                  <!--Navigation buttons-->
-                  <div class="button-row d-flex mt-4">
-                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
->>>>>>> Stashed changes
                   </div>
                 </div>
               </div>
@@ -426,12 +202,8 @@
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm-4 mt-4 mt-sm-0">
-                      <label for="">Nom</label>
-<<<<<<< Updated upstream
+                      <label for="">Nom</label
                       <input class="multisteps-form__input form-control" name="nom_representant" id="nom_representant" type="text" placeholder="Votre nom de famille"/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Votre nom de famille"/>
->>>>>>> Stashed changes
                     </div>
                     <div class="col-10 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Postnom</label>
@@ -439,21 +211,13 @@
                     </div>
                     <div class="col-10 col-sm-4">
                       <label for="">Prénom</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="prenom_representant" id="prenom_representant" type="text" placeholder="Votre premier prénom"/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Votre premier prénom"/>
->>>>>>> Stashed changes
                     </div>                    
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Lieu de Naissance</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="lieunaiss" id="lieunaiss" type="text" placeholder="Ville, Pays"/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Ville, Pays"/>
->>>>>>> Stashed changes
                     </div>
                     <div class="col-10 col-sm-3 mt-4 mt-sm-0">
                       <label for="">Date de Naissance</label>
@@ -461,11 +225,7 @@
                     </div>                    
                     <div class="col-10 col-sm-1">
                       <label for="">Sexe</label>
-<<<<<<< Updated upstream
                       <select class="multisteps-form__select form-control" name="sexe" id="sexe">
-=======
-                      <select class="multisteps-form__select form-control">
->>>>>>> Stashed changes
                         <option selected="selected">...</option>
                         <option>M</option>
                         <option>F</option>
@@ -475,13 +235,8 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm-4">
                       <label for="">Etat Civil</label>
-<<<<<<< Updated upstream
                       <select class="multisteps-form__select form-control" name="etatcivil" id="etatcivil">
                         <option selected="selected" value="">...</option>
-=======
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">...</option>
->>>>>>> Stashed changes
                         <option>Célibataire</option>
                         <option>Marié(e)</option>
                         <option>Divorcé(e)</option>
@@ -490,7 +245,6 @@
                     </div>
                     <div class="col-10 col-sm-3">
                       <label for="">Nombre d'enfants</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="nbreenfant" id="nbreenfant" type="number"/>
                     </div>
                     <div class="col-10 col-sm-5 mt-4 mt-sm-0">
@@ -498,15 +252,6 @@
                       <select class="multisteps-form__select form-control" name="nationalite" id="nationalite">
                         <option selected="selected" value="">Sélectionnez un pays...</option>
                         <option value="congolaise">Congo, RD</option>
-=======
-                      <input class="multisteps-form__input form-control" type="number" value="0"/>
-                    </div>
-                    <div class="col-10 col-sm-5 mt-4 mt-sm-0">
-                      <label for="">Pays de Nationalité</label>
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez un pays...</option>
-                        <option>Congo, RD</option>
->>>>>>> Stashed changes
                       </select>
                     </div>             
                   </div>
@@ -514,47 +259,27 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm-5 mt-4 mt-sm-0">
                       <label for="">Numéro de téléphone (Inclure l'indicatif)</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="telephone_representant" id="telephone_representant" type="text" placeholder="ex: +243-855555555"/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Adresse email</label>
                       <input class="multisteps-form__input form-control" name="email_representant" id="email_representant" type="email" placeholder="ex: dummy@dummy.com"/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="ex: +243-855555555"/>
-                    </div>
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Adresse email</label>
-                      <input class="multisteps-form__input form-control" type="email" placeholder="ex: dummy@dummy.com"/>
->>>>>>> Stashed changes
                     </div>             
                   </div>
                   <br><hr>
                   <div class="form-row mt-4">                    
                     <div class="col-10 col-sm mt-4 mt-sm">
                       <label for="">Adresse Domicile</label>                      
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="adresse_representant" id="adresse_representant" type="text" placeholder="rue/avenue, numéro parcellaire, quartier/cité, commune/territoire/village"/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="rue/avenue, numéro parcellaire, quartier/cité, commune/territoire/village"/>
->>>>>>> Stashed changes
                     </div>                             
                   </div>
                   <div class="form-row mt-4">                    
                     <div class="col-10 col-sm mt-0 mt-sm">
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="ville_representant" id="ville_representant" type="text" placeholder="Ville"/>
                     </div>
                     <div class="col-10 col-sm mt-0 mt-sm">
                       <select class="multisteps-form__select form-control" name="pays_representant" id="pays_representant">
                         <option selected="selected" value="">Sélectionnez un pays...</option>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Ville"/>
-                    </div>
-                    <div class="col-10 col-sm mt-0 mt-sm">
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez un pays...</option>
->>>>>>> Stashed changes
                         <option>Congo, RD</option>
                       </select>
                     </div>                             
@@ -563,22 +288,11 @@
                   <div class="form-row mt-4">
                     <div class="col-12 col-sm-7">
                       <label for="">Fonction (ex: PDG, Gérant, Fondateur, Consultant ...)</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="fonction" id="fonction" type="text"/>
                     </div>
                     <div class="col-10 col-sm">
                       <label for="">Années d'expérience dans le secteur</label>
                       <input class="multisteps-form__input form-control" name="experience" id="experience" type="number" value="0"/>
-=======
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez une fonction...</option>
-                        <option>...</option>
-                      </select>
-                    </div>
-                    <div class="col-10 col-sm">
-                      <label for="">Années d'expérience dans le secteur</label>
-                      <input class="multisteps-form__input form-control" type="number" value="0"/>
->>>>>>> Stashed changes
                     </div>                    
                   </div> 
                   <br><hr>               
@@ -586,11 +300,7 @@
                   <!--Navigation button-->
                   <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
-<<<<<<< Updated upstream
                     <button onclick="validation_phase2()" id="btn_suivant2" class="btn btn-primary ml-auto " type="button" title="Next">Suivant</button>
-=======
-                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
->>>>>>> Stashed changes
                   </div>
                 </div>
               </div>
@@ -603,14 +313,7 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Formation 1</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="formation_un" id="formation_un" type="text" placeholder="Saisissez le domaine de formation"/>
-=======
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez un domaine de formation...</option>
-                        <option>...</option>
-                      </select>
->>>>>>> Stashed changes
                     </div>
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
                       <label for="">Début</label>
@@ -618,55 +321,32 @@
                     </div> 
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
                       <label for="">Fin</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />
-=======
-                      <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
->>>>>>> Stashed changes
+
                     </div>                                       
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-5 mt-sm-0">
                       <label for="">Certificat/Diplôme obtenu</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="etude_un" id="etude_un" type="text" placeholder="Saisissez votre orientation"/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Ecole/Université</label>
                       <input class="multisteps-form__input form-control" name="institut_etude_un" id="institut_etude_un" type="text" placeholder="Saisissez l'institution de formation"/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Saisissez votre nom de famille"/>
-                    </div>
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Ecole/Université</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Saisissez votre nom de famille"/>
->>>>>>> Stashed changes
                     </div> 
                     <div class="col-12 col-sm">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-<<<<<<< Updated upstream
-                        <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary ">                   
-=======
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
->>>>>>> Stashed changes
+                        <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary ">              
+
                       </div>
                     </div>                                                          
                   </div>
                   <br><hr>
                   <div class="form-row mt-4">
-<<<<<<< Updated upstream
                   <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Formation 1</label>
                       <input class="multisteps-form__input form-control" name="formation_deux" id="formation_deux" type="text" placeholder="Saisissez le domaine de formation"/>
-=======
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Formation 2</label>
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez un domaine de formation...</option>
-                        <option>...</option>
-                      </select>
->>>>>>> Stashed changes
                     </div>
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
                       <label for="">Début</label>
@@ -674,38 +354,21 @@
                     </div> 
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
                       <label for="">Fin</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="datefin_formation_deux" id="datefin_formation_deux" type="date" />
-=======
-                      <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
->>>>>>> Stashed changes
                     </div>                                       
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-5 mt-sm-0">
                       <label for="">Certificat/Diplôme obtenu</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="etude_deux" id="etude_deux" type="text" placeholder="Saisissez votre orientation"/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Ecole/Université</label>
                       <input class="multisteps-form__input form-control" name="institut_etude_deux" id="institut_etude_deux" type="text" placeholder="Saisissez l'institution de formation"/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Saisissez votre nom de famille"/>
-                    </div>
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Ecole/Université</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Saisissez votre nom de famille"/>
->>>>>>> Stashed changes
                     </div> 
                     <div class="col-12 col-sm">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-<<<<<<< Updated upstream
-                        <input type="file" name="etude_deux_piece" id="etude_deux_piece" class="btn btn-primary ">                   
-=======
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
->>>>>>> Stashed changes
                       </div>
                     </div>                                                          
                   </div>
@@ -724,21 +387,14 @@
                     </div> 
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
                       <label for="">Fin</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="datefin_formation_trois" id="datefin_formation_trois" type="date" />
-=======
-                      <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
->>>>>>> Stashed changes
+
                     </div>                                       
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-5 mt-sm-0">
                       <label for="">Certificat/Diplôme obtenu</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="etude_trois" id="etude_trois" type="text" placeholder="Saisissez votre orientation"/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Saisissez votre nom de famille"/>
->>>>>>> Stashed changes
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Ecole/Université</label>
@@ -749,11 +405,8 @@
                       <div class="button-row d-flex mt-0">
                         <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
                       </div>
-<<<<<<< Updated upstream
-                    </div>                                       
-=======
-                    </div>                                                           
->>>>>>> Stashed changes
+                    </div>                                     
+
                   </div>
                   <br><hr>
 
@@ -764,9 +417,7 @@
                       <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
                     </div>
                   </div>
-
                 </div>
-              </div>  
 
               <!--single form panel - Coordonnées bancaires-->
               <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
@@ -775,13 +426,8 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm">
                       <label for="">Nom de la Banque</label>
-<<<<<<< Updated upstream
                       <select class="multisteps-form__select form-control" name="nom_banque" id="nom_banque">
                         <option selected="selected" value="">Sélectionnez une banque...</option>
-=======
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez une banque...</option>
->>>>>>> Stashed changes
                         <option>BCC</option>
                         <option>Equitity BCDC</option>
                         <option>RawBank</option>
@@ -795,11 +441,7 @@
                     </div>
                     <div class="col-10 col-sm-2">
                       <label for="">Code SWIFT</label>
-<<<<<<< Updated upstream
                       <input class="multisteps-form__input form-control" name="codswift" id="codswift" type="text" placeholder="Code SWIFT"/>
-=======
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Code SWIFT"/>
->>>>>>> Stashed changes
                     </div>
                     <div class="col-10 col-sm-6">
                       <label for="">Numéro de Compte</label>
@@ -813,8 +455,6 @@
                 </div>
               </div>
 
-<<<<<<< Updated upstream
-=======
                <!--single form panel - Attachments-->
                <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
                 <h3 class="multisteps-form__title">Pièces jointes</h3>
@@ -964,63 +604,56 @@
                   </div>
                 </div>
               
-
->>>>>>> Stashed changes
               <!--single form panel - Termes et conditions-->
               <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
                 <h3 class="multisteps-form__title">Termes et conditions</h3>
                 <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="col-10 col-sm-10 m-auto">
+                      <ol>
+                        <li>Les données recueillies restent sous la responsabilité administrative de OMEGA System qui prend en charge leur sécurisation dans les limites de ses ressources et de ses capacités.</li>
+                        <br><li>OMEGA System s’engage à apporter tout le soin nécessaire à la protection des données personnelles et des entreprises soumises à travers son système.</li>
+                        <br><li>Les obligations financières des utilisateurs qui découlent de l’utilisation des ressources nécessaires pour accéder à OMEGA System sont pleinement la responsabilité de l’utilisateur.</li>
+                        <br><li>Toute manipulation engagée par l’utilisateur au-delà des présents termes et conditions d’utilisation sont sous la responsabilité de l’utilisateur de OMEGA System. Il appartient donc à l’utilisateur de prendre les mesures nécessaires à la sécurisation de ses appareils lors de sa connexion à OMEGA System.</li>
+                        <br><li>OMEGA System n’est pas responsable des dommages causés par le mauvais état du matériel appartenant à l’utilisateur ou dus à l’inobservation par l’utilisateur de l’une de ses obligations prévues à l’article 4 ci-dessus, et à l’inobservation des règles d’Hygiène et de Sécurité.</li>
+                        <br><li>Chaque partie est tenue au secret professionnel à l’égard des tiers, non seulement sur les activités de l’autre partie touchant au domaine des travaux prévus par le présent contrat, mais encore sur les autres activités de l’autre partie dont elle a pu avoir connaissance à l’occasion de l’exécution de ce contrat.</li>
+                        <br><li>Chaque partie ne pourra faire de publications ou communications écrites ou orales relatives aux travaux ou aux activités de l’autre partie dont elle a pu avoir connaissance lors de l’exécution du présent contrat, qu’après autorisation préalable écrite de l’autre partie.</li>
+                        <br><li>Dans le cas où le demandeur aurait vu ses données compromis pour des raisons qui dépassent le contrôle de OMEGA System, l’utilisateur ne pourra réclamer à OMEGA System ni indemnité ni remboursement des sommes déboursées pour la production de ces données pour autant que les stipulations du précédent article 4 auront été respectées, étant bien entendu que OMEGA System ne peut garantir une sécurité sans failles du côté de l’hébergeur.</li>
+                        <br><li>Pour toutes les contestations relatives à l’interprétation ou à l’exécution du présent contrat, le Droit applicable est le Droit Congolais.</li>
+                        <br><li>S’il survient un litige relatif à l’interprétation ou à l’exécution du contrat, OMEGA System tentera d’abord de rechercher une solution à l’amiable avant tout recours aux Tribunaux Congolais spécialisé en la matière.</li>
+                      </ol>
+                    </div>
+                  </div> 
+                  <hr>                     
+                  
                   <div class="form-row mt-4 border m-auto">                    
                     <div class="col-10 col-sm-6">
-<<<<<<< Updated upstream
                       <label for="">J'ai lu et j'accepte les <a href="index.php?load=conditions" target="_blank">termes et conditions</a></label>
                     </div>
                     <div class="col-10 col-sm-1">
                       <input class="form-check-input" type="checkbox" id="check_terme" name="check_terme" value="something" unchecked required>
-=======
-                      <label for="">J'ai lu et j'accepte les <a href="conditions.html" target="_blank">termes et conditions</a></label>
-                    </div>
-                    <div class="col-10 col-sm-1">
-                      <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" unchecked>
->>>>>>> Stashed changes
-                    </div>
-                    
+                    </div>                    
                   </div>
                   <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
-<<<<<<< Updated upstream
                     <button class="btn btn-success ml-auto" type="submit" title="Send">Soumettre</button>
-=======
-                    <a class="ml-auto" href="confirmation.php"><button class="btn btn-success" type="button" title="Send">Soumettre</button></a>
->>>>>>> Stashed changes
                   </div>
                 </div>
               </div>
-              
             </form>
-          </div>
+            </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
+   
 <!-- footer -->
-<<<<<<< Updated upstream
 <?php // include('../footer.html') ?>
-=======
-<?php include('../footer.html') ?>
->>>>>>> Stashed changes
-<!-- footer -->
 
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
-
-<<<<<<< Updated upstream
   <script src="script/Js/script.js"></script>
-=======
-  <script src="../../script/Js/script.js"></script>
->>>>>>> Stashed changes
 
   <script>
     function clearTextBoxes(){
@@ -1031,7 +664,7 @@
       }
     }
   }
-<<<<<<< Updated upstream
+    
   function validation_phase1(){
     var form_inscription=document.getElementById('form_inscription');
     var denom_entreprise=document.getElementById('denom_entreprise');
@@ -1084,8 +717,7 @@
       btn_suivant3.classList.add('js-btn-next')
     }
   }
-=======
->>>>>>> Stashed changes
+
   </script>
 
 </body>

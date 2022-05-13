@@ -94,6 +94,117 @@
     <div id="pcoded" class="pcoded">
         <div class="pcoded-overlay-box"></div>
         <div class="pcoded-container navbar-wrapper">
+            <nav class="navbar header-navbar pcoded-header" style="background-color: black;">
+                <div class="navbar-wrapper">
+                    <div class="navbar-logo">
+                        <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <div class="mobile-search waves-effect waves-light">
+                            <div class="header-search">
+                                <div class="main-search morphsearch-search">
+                                    <div class="input-group">
+                                        <span class="input-group-prepend search-close"><i class="ti-close input-group-text"></i></span>
+                                        <input type="text" class="form-control" placeholder="Entrer l'élément à rechercher">
+                                        <span class="input-group-append search-btn"><i class="ti-search input-group-text"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="index_admin.php">
+                            <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+                        </a>
+                        <a class="mobile-options waves-effect waves-light">
+                            <i class="ti-more"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-container container-fluid">
+                        <ul class="nav-left">
+                            <li>
+                                <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                            </li>
+                            <li>
+                                <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                                    <i class="ti-fullscreen"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+                            <li class="header-notification">
+                                <a href="#!" class="waves-effect waves-light">
+                                    <i class="ti-bell"></i>
+                                    <span class="badge bg-c-red"></span>
+                                </a>
+                                <ul class="show-notification">
+                                    <li>
+                                        <h6>Souscription recents</h6>
+                                        <label class="label label-danger">Nouvelle</label>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">Elohim Baron</h5>
+                                                <p class="notification-msg">Consultat en nouvelle technologie de l'information et télécom.</p>
+                                                <span class="notification-time">il y a 30 minutes</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">Vodacom Drc</h5>
+                                                <p class="notification-msg">Fournisseur d'accès internet haut débit.</p>
+                                                <span class="notification-time">il y a 1heure</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">ABC</h5>
+                                                <p class="notification-msg">Spécialisée aux réalisations des grand travaux de construction.</p>
+                                                <span class="notification-time">il y a 2 jours</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="user-profile header-notification">
+                                <a href="#!" class="waves-effect waves-light">
+                                    <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                    <span><?php echo $_SESSION['nomuser']; ?></span>
+                                    <i class="ti-angle-down"></i>
+                                </a>
+                                <ul class="show-notification profile-notification">
+                                    <li class="waves-effect waves-light">
+                                        <a href="#!">
+                                            <i class="ti-settings"></i> Parametre
+                                        </a>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <a href="user-profile.html">
+                                            <i class="ti-user"></i> Profil
+                                        </a>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <a href="email-inbox.html">
+                                            <i class="ti-email"></i> Mes Messages
+                                        </a>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <a href="ad_access.php">
+                                            <i class="ti-layout-sidebar-left"></i> Se déconnecter
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
             <div class="pcoded-main-container">
                 <div class="pcoded-wrapper">
@@ -112,9 +223,7 @@
                                         <li class="more-details">
                                             <a href="user-profile.html"><i class="ti-user"></i>Profil</a>
                                             <a href="#!"><i class="ti-settings"></i>Parametre</a>
-
-                                            <a href="index_admin.php?logout=0"><i class="ti-layout-sidebar-left"></i>Se déconnecter</a>
-
+                                            <a href="ad_access.php"><i class="ti-layout-sidebar-left"></i>Se déconnecter</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -862,7 +971,7 @@
 </div>
 </div>
 </div>
-<script src="Scripts/Js/B_scriptaccesspage.js"></script>
+<script src="script/Js/B_scriptaccesspage.js"></script>
 <!-- Required Jquery -->
 <script type="text/javascript" src="assets/js/jquery/jquery.min.js "></script>
 <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>

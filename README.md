@@ -1,1 +1,10 @@
 # omega_syst_2022
+
+ENREGISTREMENT D'UNE ENTREPRISE
+Pour enregistrer une entreprise dans la base de donnée, 
+1. Remplir la première étape du formulaire: "Détails sur l'entreprise". 
+2. Remplir les informations sur le représentant légal de l'entreprise. La fonction par défaut étant "Représentant légal", elle sera enregistrée automatiquement dans la base de données en tenant compte de l'identifiant relatif à ladite fonction de l'utilisateur. 
+3. Remplir les champs liés à la formation du représentant légal. S'il y a plus d'une formation, l'utilisateur en ajoute autant qu'il veut. Ensuite, ces formations vont dans un tableau dont les enregistements seront transférés grace à une boucle. Une formation équivaut à un cycle d'études (court ou long), courroné par un certificat ou un diplôme. La formation pourrait aussi être en cours; il faut tout de même l'enregistrer. Dans cette partie, le formulaire est dynamique de sorte que l'utilisateur peut ajouter autant de champs de saisie que de formations suivies. Ces formation iront s'enregistrer dans la BDD avec la clé de l'utilisateur. 
+4. En ce qui concerne l'enregistrement des coordonnées bancaires, l'ID de la banque est enregistré dans la table omega_entreprise. Le numéro de compte bancaire s'enregistre dans la table omega_entreprise et le reste des informations concernant la banque seront créées au préalable par l'adminsitrateur. Ce qui veut dire qu'une entreprise ne peut pas enregistrer un numéro de compte pour un banque qui n'existe pas dans la BDD. Toutefois, le code SWIFT s'affichera par formalité dans le formulaire pour que le représentant légal en prenne connaissance. 
+5. Pour l'enregistrement des documents de l'entreprise, la table omega_entreprise donnera son ID à omega_dossier. C'est dans omega_dossier que les numéros d'enregistrement de chaque docuemnt ainsi que le chemin du fichier correspondant sera enregistré. Les fichiers iront dans un répertoir créé automatiquement au moment de l'enregistrement afin de ne pas surcharger la BDD. 
+

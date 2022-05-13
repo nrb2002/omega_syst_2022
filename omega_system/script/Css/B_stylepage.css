@@ -1,11 +1,4 @@
-body{
-    background-color: rgba(68, 57, 42, 0.158);
-}
-.logo{
-  width: 6%;  
-  border-radius: 5px;
-  margin: 10px;
-}
+
 .boiteIDtitre{
     font-size: 30px;
     margin-top: -50px;

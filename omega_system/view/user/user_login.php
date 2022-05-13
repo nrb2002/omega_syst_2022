@@ -24,12 +24,16 @@
         <div class="content__inner">
 
             <!--user login form main container-->
-            <div class="container overflow-hidden">
+
+            <div class="container overflow-hidden mt-4">
+
                 <!--userlogin-form-->
                 <div class="login-form">
                     <!--form title-->
                     <div class="row">
-                        <div class="col-sm-10 mt-4 m-auto">
+
+                        <div class="col col-sm mt-4 m-auto ">
+
                             <div class="login-form__title text-center">
                                 <h5>Profitez des avantages incontournables qu'offre</h5>
                                 <div class="login-form__title text-center">
@@ -44,7 +48,9 @@
                     <div class="row g-0 mb-sm-5 mt-5">
                         
                         <!--user login form -->                        
-                        <div class="col-sm-6 m-auto">
+
+                        <div class="col col-sm-6 m-auto">
+
                             <form class="login-form__form border bg-light" method="post" action="index.php">
                                     
                                 <!--single form panel - User Login-->
@@ -52,7 +58,9 @@
                                     
                                     <div class="login-form__content">
                                         <!--Print error message if field are empty-->
+
                                         <i style="color: red;"><?php echo  $msg; ?></i><br>
+
                                         <h4>Login</h4>
                                         <hr>
 
@@ -83,8 +91,10 @@
                                         
                                         <!--login button-->
                                         <div class="button-row row-sm-8 d-flex mt-4">
-                                            <div class="col-sm-8 m-auto">
-                                                <button type="submit" class="btn btn-success ml-auto" style="width: 250px;" title="Send" value="Acceder">Accéder</button>
+
+                                            <div class="col-6 col-sm-6 m-auto">
+                                                <button type="submit" class="btn btn-success m-auto" style="width: 250px;" title="Send" value="Acceder">Accéder</button>
+
                                             </div>                                            
                                         </div>
 
@@ -98,7 +108,9 @@
                                         <!--Register-->
                                         <div class="form-row mt-4 ">                                            
                                             <div class="col-sm text-sm-right">
+
                                                 <a href="index.php?load=registration"><small><i>Pas encore membre? Enregistrez-vous maintenant!</i></small></a>                                           
+
                                             </div>                                                                                        
                                         </div>
                                     </div>
