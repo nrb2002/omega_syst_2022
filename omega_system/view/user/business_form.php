@@ -202,8 +202,9 @@
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm-4 mt-4 mt-sm-0">
-                      <label for="">Nom</label
-                      <input class="multisteps-form__input form-control" name="nom_representant" id="nom_representant" type="text" placeholder="Votre nom de famille"/>
+                      <label for="">Nom</label>
+                      <input class="multisteps-form__input form-control" name="nom_representant" id="nom_representant" type="text" placeholder="Votre nom de famille">
+                      
                     </div>
                     <div class="col-10 col-sm-4 mt-4 mt-sm-0">
                       <label for="">Postnom</label>
