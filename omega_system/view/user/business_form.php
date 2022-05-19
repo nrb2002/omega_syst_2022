@@ -67,7 +67,7 @@
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Dénomination</label>
+                      <label for="">Dénomination <strong class="text-danger">*</strong></label>
                       <input class="multisteps-form__input form-control" name="denom_entreprise" id="denom_entreprise" type="text" placeholder="Nom de l'entreprise en toutes lettres" required/>
                     </div>
                     <div class="col-10 col-sm-2 mt-4 mt-sm-0">
@@ -75,17 +75,17 @@
                       <input class="multisteps-form__input form-control" type="text" placeholder="Sigle"/>
                     </div>
                     <div class="col-10 col-sm-3 mt-4 mt-sm-0">
-                      <label for="">Date de Création</label>
+                      <label for="">Date de Création<strong class="text-danger">*</strong></label>
                       <input class="multisteps-form__input form-control" name="date_create" id="date_create" type="date" required/>
                     </div>                   
                   </div>
                   <div class="form-row mt-4">
                     <label for="">Objectif</label>
-                    <textarea class="multisteps-form__textarea form-control" name="objectif" id="objectif" maxlength=300 placeholder="Decrire brièvement l'objectif de l'entreprise" required></textarea>
+                    <textarea class="multisteps-form__textarea form-control" name="objectif" id="objectif" maxlength=300 placeholder="Decrire brièvement l'objectif de l'entreprise"></textarea>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm">
-                      <label for="">Forme juridique</label>
+                      <label for="">Forme juridique<strong class="text-danger">*</strong></label>
                       <select class="multisteps-form__select form-control" name="forme_juridique" id="forme_juridique" required>
                         <option selected="selected" value="">Sélectionnez la forme juridique</option>
                         <option>Etablissement</option>
@@ -97,7 +97,7 @@
                     </div>
                     <div class="col-10 col-sm">
                       <label for="">Catégorie</label>
-                      <select class="multisteps-form__select form-control" name="categorie" id="categorie" required>
+                      <select class="multisteps-form__select form-control" name="categorie" id="categorie">
                         <option selected="selected" value="">Sélectionnez une catégorie</option>
                         <option>Freelance</option>
                         <option>Micro-entreprise</option>
@@ -110,22 +110,22 @@
                     </div>
                     <div class="col-10 col-sm-3">
                       <label for="">Nombre de travailleurs</label>
-                      <input class="multisteps-form__input form-control" type="number" name="nbre_travailleurs" id="nbre_travailleurs" required/>
+                      <input class="multisteps-form__input form-control" type="number" name="nbre_travailleurs" id="nbre_travailleurs" />
                     </div>
                   </div>                    
                   <br><hr>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm">
-                      <label for="">Chiffre d'affaires annuel (en USD)</label>
+                      <label for="">Chiffre d'affaires annuel (en USD)<strong class="text-danger">*</strong></label>
                       <input class="multisteps-form__input form-control" type="number" name="ca" id="ca" required/>
                     </div>
                     <div class="col-10 col-sm">
-                      <label for="">Capital social (en USD)</label>
+                      <label for="">Capital social (en USD)<strong class="text-danger">*</strong></label>
                       <input class="multisteps-form__input form-control" type="number" name="capitalsocial" id="capitalsocial" required/>
                     </div>
                     <div class="col-10 col-sm-4">
                       <label for="">Secteur d'activités</label>
-                      <select class="multisteps-form__select form-control" name="activite" id="activite" required>
+                      <select class="multisteps-form__select form-control" name="activite" id="activite" >
                         <option selected="selected" value="">Sélectionnez un secteur...</option>
                         <option>Agro-business</option>
                         <option>Agro-industrie</option>
@@ -141,18 +141,18 @@
                   <br><hr>
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm-5 mt-4 mt-sm-0">
-                      <label for="">Numéro de téléphone (Inclure l'indicatif)</label>
+                      <label for="">Numéro de téléphone (Inclure l'indicatif)<strong class="text-danger">*</strong></label>
                       <input class="multisteps-form__input form-control" type="text" placeholder="ex: +243-855555555" name="telephone" id="telephone" required/>
                     </div>
                     <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Adresse email</label>
+                      <label for="">Adresse email<strong class="text-danger">*</strong></label>
                       <input class="multisteps-form__input form-control" name="email" id="email" type="email" placeholder="ex: dummy@dummy.com" required/>
                     </div>             
                   </div>
                   <br><hr>
                   <div class="form-row mt-4">                    
                     <div class="col-10 col-sm mt-sm">
-                      <label for="">Siège social</label>                      
+                      <label for="">Siège social<strong class="text-danger">*</strong></label>                      
                       <input class="multisteps-form__input form-control" name="siege" id="siege" type="text" placeholder="rue/avenue, numéro parcellaire, quartier/cité, commune/territoire/village" required/>
                     </div>                             
                   </div>
@@ -170,7 +170,7 @@
                   <br><hr>
                   <div class="form-row mt-4">                    
                     <div class="col-10 col-sm mt-sm">
-                      <label for="">Adresse d'exploitation</label>                      
+                      <label for="">Adresse d'exploitation<strong class="text-danger">*</strong></label>                      
                       <input class="multisteps-form__input form-control" name="adressexploitation" id="adressexploitation" type="text" placeholder="rue/avenue, numéro parcellaire, quartier/cité, commune/territoire/village" required/>
                     </div>                             
                   </div>
@@ -200,8 +200,8 @@
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm-4 mt-4 mt-sm-0">
-                      <label for="">Nom</label>
-                      <input class="multisteps-form__input form-control" name="nom_representant" id="nom_representant" type="text" placeholder="Votre nom de famille">
+                      <label for="">Nom<strong class="text-danger">*</strong></label>
+                      <input class="multisteps-form__input form-control" name="nom_representant" id="nom_representant" type="text" placeholder="Votre nom de famille" required>
                       
                     </div>
                     <div class="col-10 col-sm-4 mt-4 mt-sm-0">
@@ -209,8 +209,8 @@
                       <input class="multisteps-form__input form-control" type="text" placeholder="Votre deuxième prénom"/>
                     </div>
                     <div class="col-10 col-sm-4">
-                      <label for="">Prénom</label>
-                      <input class="multisteps-form__input form-control" name="prenom_representant" id="prenom_representant" type="text" placeholder="Votre premier prénom"/>
+                      <label for="">Prénom<strong class="text-danger">*</strong></label>
+                      <input class="multisteps-form__input form-control" name="prenom_representant" id="prenom_representant" type="text" placeholder="Votre premier prénom" required/>
                     </div>                    
                   </div>
                   <div class="form-row mt-4">
@@ -219,12 +219,12 @@
                       <input class="multisteps-form__input form-control" name="lieunaiss" id="lieunaiss" type="text" placeholder="Ville, Pays"/>
                     </div>
                     <div class="col-10 col-sm-3 mt-4 mt-sm-0">
-                      <label for="">Date de Naissance</label>
-                      <input class="multisteps-form__input form-control" type="date" />
+                      <label for="">Date de Naissance<strong class="text-danger">*</strong></label>
+                      <input class="multisteps-form__input form-control" type="date" required/>
                     </div>                    
                     <div class="col-10 col-sm-1">
-                      <label for="">Sexe</label>
-                      <select class="multisteps-form__select form-control" name="sexe" id="sexe">
+                      <label for="">Sexe<strong class="text-danger">*</strong></label>
+                      <select class="multisteps-form__select form-control" name="sexe" id="sexe" required>
                         <option selected="selected">...</option>
                         <option>M</option>
                         <option>F</option>
@@ -247,8 +247,8 @@
                       <input class="multisteps-form__input form-control" name="nbreenfant" id="nbreenfant" type="number"/>
                     </div>
                     <div class="col-10 col-sm-5 mt-4 mt-sm-0">
-                      <label for="">Pays de Nationalité</label>
-                      <select class="multisteps-form__select form-control" name="nationalite" id="nationalite">
+                      <label for="">Nationalité<strong class="text-danger">*</strong></label>
+                      <select class="multisteps-form__select form-control" name="nationalite" id="nationalite" required>
                         <option selected="selected" value="">Sélectionnez un pays...</option>
                         <option value="congolaise">Congo, RD</option>
                       </select>
@@ -283,18 +283,7 @@
                       </select>
                     </div>                             
                   </div>
-                  <br><hr>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-7">
-                      <label for="">Fonction (ex: PDG, Gérant, Fondateur, Consultant ...)</label>
-                      <input class="multisteps-form__input form-control" name="fonction" id="fonction" type="text"/>
-                    </div>
-                    <div class="col-10 col-sm">
-                      <label for="">Années d'expérience dans le secteur</label>
-                      <input class="multisteps-form__input form-control" name="experience" id="experience" type="number" value="0"/>
-                    </div>                    
-                  </div> 
-                  <br><hr>               
+                  <br><hr>              
                   
                   <!--Navigation button-->
                   <div class="button-row d-flex mt-4">
@@ -309,102 +298,48 @@
                 <h3 class="multisteps-form__title">Formation scolaire, académique ou professionnelle</h3>
                 <div class="multisteps-form__content">
                   <br><hr>
-                  <div class="form-row mt-4">
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Formation 1</label>
-                      <input class="multisteps-form__input form-control" name="formation_un" id="formation_un" type="text" placeholder="Saisissez le domaine de formation"/>
-                    </div>
-                    <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                      <label for="">Début</label>
-                      <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
-                    </div> 
-                    <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                      <label for="">Fin</label>
-                      <input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />
-                    </div>                                       
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-10 col-sm mt-5 mt-sm-0">
-                      <label for="">Certificat/Diplôme obtenu</label>
-                      <input class="multisteps-form__input form-control" name="etude_un" id="etude_un" type="text" placeholder="Saisissez votre orientation"/>
-                    </div>
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Ecole/Université</label>
-                      <input class="multisteps-form__input form-control" name="institut_etude_un" id="institut_etude_un" type="text" placeholder="Saisissez l'institution de formation"/>
-                    </div> 
-                    <div class="col-12 col-sm">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                        <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary ">          
-                      </div>
-                    </div>                                                          
-                  </div>
-                  <br><hr>
-                  <div class="form-row mt-4">
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Formation 1</label>
-                      <input class="multisteps-form__input form-control" name="formation_deux" id="formation_deux" type="text" placeholder="Saisissez le domaine de formation"/>
-                    </div>
-                    <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                      <label for="">Début</label>
-                      <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
-                    </div> 
-                    <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                      <label for="">Fin</label>
-                      <input class="multisteps-form__input form-control" name="datefin_formation_deux" id="datefin_formation_deux" type="date" />
-                    </div>                                       
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-10 col-sm mt-5 mt-sm-0">
-                      <label for="">Certificat/Diplôme obtenu</label>
-                      <input class="multisteps-form__input form-control" name="etude_deux" id="etude_deux" type="text" placeholder="Saisissez votre orientation"/>
-                    </div>
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Ecole/Université</label>
-                      <input class="multisteps-form__input form-control" name="institut_etude_deux" id="institut_etude_deux" type="text" placeholder="Saisissez l'institution de formation"/>
-                    </div> 
-                    <div class="col-12 col-sm">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                      </div>
-                    </div>                                                          
-                  </div>
-                  <br><hr>
-                  <div class="form-row mt-4">
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Formation 3</label>
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">Sélectionnez un domaine de formation...</option>
-                        <option>...</option>
-                      </select>
-                    </div>
-                    <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                      <label for="">Début</label>
-                      <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
-                    </div> 
-                    <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                      <label for="">Fin</label>
-                      <input class="multisteps-form__input form-control" name="datefin_formation_trois" id="datefin_formation_trois" type="date" />
-                    </div>                                       
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-10 col-sm mt-5 mt-sm-0">
-                      <label for="">Certificat/Diplôme obtenu</label>
-                      <input class="multisteps-form__input form-control" name="etude_trois" id="etude_trois" type="text" placeholder="Saisissez votre orientation"/>
-                    </div>
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                      <label for="">Ecole/Université</label>
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Saisissez votre nom de famille"/>
-                    </div>
-                    <div class="col-12 col-sm">
-                      <label for="">Pièce jointe</label>
-                      <div class="button-row d-flex mt-0">
-                        <button class="btn btn-primary " type="button" title="attachment">Joindre...</button>                      
-                      </div>
-                    </div>                                     
 
+                  <!--Education ou Formation suivie-->
+                  <div class="row border m-auto">
+                    <div class="col-sm">
+                      <!--Domaine de formation-->
+                      <div class="row m-2">
+                        <div class="col-sm mt-sm-0 ml-0 pl-0">
+                          <label for="">Domaine de Formation<strong class="text-danger">*</strong></label>
+                          <input class="multisteps-form__input form-control" name="formation_un" id="formation_un" type="text" placeholder="Saisissez le domaine de formation" required/>
+                        </div>
+                        <div class="col-sm-3 mt-3 mt-sm-0">
+                          <label for="">Début</label>
+                          <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
+                        </div> 
+                        <div class="col-sm-3 mt-3 mt-sm-0">
+                          <label for="">Fin</label>
+                          <input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />
+                        </div>                                       
+                      </div> 
+                      <!--Diplôme ou Certificat obtenu, Ecole fréquentée, Pièce jointe-->                 
+                      <div class="form-row mt-4">
+                        <div class="col-10 col-sm mt-5 mt-sm-0">
+                          <label for="">Certificat/Diplôme obtenu <strong class="text-danger">*</strong></label>
+                          <input class="multisteps-form__input form-control" name="etude_un" id="etude_un" type="text" placeholder="Saisissez votre orientation" required/>
+                        </div>
+                        <div class="col-10 col-sm mt-4 mt-sm-0">
+                          <label for="">Ecole/Université<strong class="text-danger">*</strong></label>
+                          <input class="multisteps-form__input form-control" name="institut_etude_un" id="institut_etude_un" type="text" placeholder="Saisissez l'institution de formation" required/>
+                        </div> 
+                        <div class="col-12 col-sm">
+                          <label for="">Pièce jointe </label>
+                          <div class="button-row d-flex mt-0">
+                            <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary " accept="image/png, image/jpeg, .pdf">                                   
+                          </div>
+                          <small><i>png, jpeg, pdf</i></small>
+                        </div>                                                          
+                      </div>
+                    </div>
                   </div>
-                  <br><hr>
+                  
+                  
+                  
 
                   <!--Navigation button-->
                   <div class="row">                    
