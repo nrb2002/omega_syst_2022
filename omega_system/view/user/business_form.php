@@ -300,7 +300,7 @@
                   <br><hr>
 
                   <!--Education ou Formation suivie-->
-                  <div class="row border m-auto">
+                  <div class="row control-group border m-auto">
                     <div class="col-sm">
                       <!--Domaine de formation-->
                       <div class="row m-2">
@@ -335,12 +335,16 @@
                           <small><i>png, jpeg, pdf</i></small>
                         </div>                                                          
                       </div>
+                      <!--Ajouter ou supprimer une formation-->                 
+                      <div class="form-row">
+                        <div class="col col-sm">                          
+                          <button class="btn btn-outline-success ml-2" type="button" id="btnAjouter" title="addEducation">Ajouter</button>
+                          <button class="btn btn-outline-danger ml-2" type="button" id="btnSupprimer" title="addEducation">Supprimer</button>
+                        </div>                                                                                                        
+                      </div>
                     </div>
                   </div>
                   
-                  
-                  
-
                   <!--Navigation button-->
                   <div class="row">                    
                     <div class="button-row d-flex mt-4 col-12">
