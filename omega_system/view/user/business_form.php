@@ -46,11 +46,9 @@
         <div class="row">
           <div class="col-md-12 ml-auto mr-auto mb-4">
             <div class="multisteps-form__progress">
-              <button class="multisteps-form__progress-btn js-active" type="button" title="Comments">L'entreprise</button>
-              <button class="multisteps-form__progress-btn " type="button" title="User Info">Représentant Légal</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Address">Education</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Comments">Coordonnées bancaires</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Comments">Soumission</button>
+              <button class="multisteps-form__progress-btn js-active" type="button" title="Business info">L'entreprise</button>
+              <button class="multisteps-form__progress-btn " type="button" title="Legal Rep">Représentant Légal</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Education">Education</button>
               <button class="multisteps-form__progress-btn" type="button" title="Bank info">Coordonnées bancaires</button>
               <button class="multisteps-form__progress-btn" type="button" title="Attachments">Pièces jointes</button>
               <button class="multisteps-form__progress-btn" type="button" title="Submit">Soumission</button>
@@ -323,7 +321,6 @@
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
                       <label for="">Fin</label>
                       <input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />
-
                     </div>                                       
                   </div>
                   <div class="form-row mt-4">
@@ -338,14 +335,13 @@
                     <div class="col-12 col-sm">
                       <label for="">Pièce jointe</label>
                       <div class="button-row d-flex mt-0">
-                        <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary ">              
-
+                        <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary ">          
                       </div>
                     </div>                                                          
                   </div>
                   <br><hr>
                   <div class="form-row mt-4">
-                  <div class="col-10 col-sm mt-4 mt-sm-0">
+                    <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Formation 1</label>
                       <input class="multisteps-form__input form-control" name="formation_deux" id="formation_deux" type="text" placeholder="Saisissez le domaine de formation"/>
                     </div>
@@ -389,7 +385,6 @@
                     <div class="col-10 col-sm-3 mt-3 mt-sm-0">
                       <label for="">Fin</label>
                       <input class="multisteps-form__input form-control" name="datefin_formation_trois" id="datefin_formation_trois" type="date" />
-
                     </div>                                       
                   </div>
                   <div class="form-row mt-4">
@@ -418,7 +413,9 @@
                       <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
                     </div>
                   </div>
+
                 </div>
+              </div>
 
               <!--single form panel - Coordonnées bancaires-->
               <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
@@ -427,8 +424,8 @@
                   <div class="form-row mt-4">
                     <div class="col-10 col-sm">
                       <label for="">Nom de la Banque</label>
-                      <select class="multisteps-form__select form-control" name="nom_banque" id="nom_banque">
-                        <option selected="selected" value="">Sélectionnez une banque...</option>
+                      <select class="multisteps-form__select form-control">
+                        <option selected="selected">Sélectionnez une banque...</option>
                         <option>BCC</option>
                         <option>Equitity BCDC</option>
                         <option>RawBank</option>
@@ -442,7 +439,7 @@
                     </div>
                     <div class="col-10 col-sm-2">
                       <label for="">Code SWIFT</label>
-                      <input class="multisteps-form__input form-control" name="codswift" id="codswift" type="text" placeholder="Code SWIFT"/>
+                      <input class="multisteps-form__input form-control" type="text" placeholder="Code SWIFT"/>
                     </div>
                     <div class="col-10 col-sm-6">
                       <label for="">Numéro de Compte</label>
@@ -456,8 +453,8 @@
                 </div>
               </div>
 
-               <!--single form panel - Attachments-->
-               <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
+              <!--single form panel - Attachments-->
+              <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
                 <h3 class="multisteps-form__title">Pièces jointes</h3>
                 <div class="multisteps-form__content">                  
                   <div class="form-row mt-4 text-left">
@@ -596,14 +593,14 @@
                       </div>
                     </div>                   
                   </div>  
-                  <!--Attachments-->                  
-                  </div>
-                    <div class="button-row d-flex mt-4">
-                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
-                      <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
-                    </div>
-                  </div>
+                                    
                 </div>
+                <!--Navigation buttons-->
+                <div class="button-row d-flex mt-4">
+                  <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+                  <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+                </div>                  
+              </div>              
               
               <!--single form panel - Termes et conditions-->
               <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
