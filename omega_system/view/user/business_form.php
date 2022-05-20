@@ -658,7 +658,7 @@
 		//Supprimer une instance de formation
 		$("body").on("click", "#DeleteRow", function () {
             $(this).parents("#education").remove();
-        });
+    });
     
 
 
