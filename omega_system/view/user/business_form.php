@@ -65,7 +65,7 @@
               <div class="multisteps-form__panel shadow p-4 rounded bg-light js-active" data-animation="slideHorz">
                 <h3 class="multisteps-form__title">Détails sur l'entreprise</h3>
                 <div class="multisteps-form__content">
-                  <div class="form-row mt-4">
+                  <div class="form-row mt-4 text-left">
                     <div class="col-10 col-sm mt-4 mt-sm-0">
                       <label for="">Dénomination <strong class="text-danger">*</strong></label>
                       <input class="multisteps-form__input form-control" name="denom_entreprise" id="denom_entreprise" type="text" placeholder="Nom de l'entreprise en toutes lettres" required/>
@@ -300,49 +300,60 @@
                   <br><hr>
 
                   <!--Education ou Formation suivie-->
-                  <div class="row control-group border m-auto">
-                    <div class="col-sm">
-                      <!--Domaine de formation-->
-                      <div class="row m-2">
-                        <div class="col-sm mt-sm-0 ml-0 pl-0">
+                  <div class="row" >
+                    <!--Une instance de Formation-->	
+                    <div class="row" id="education">
+                      <!--Champs de saisie pour une formation-->	
+                      <div class="col col-sm ml-sm-4 border">
+                        <!--Domaine de formation-->																	
+                        <div class="form-row p-2">
                           <label for="">Domaine de Formation<strong class="text-danger">*</strong></label>
                           <input class="multisteps-form__input form-control" name="formation_un" id="formation_un" type="text" placeholder="Saisissez le domaine de formation" required/>
-                        </div>
-                        <div class="col-sm-3 mt-3 mt-sm-0">
-                          <label for="">Début</label>
-                          <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
-                        </div> 
-                        <div class="col-sm-3 mt-3 mt-sm-0">
-                          <label for="">Fin</label>
-                          <input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />
-                        </div>                                       
-                      </div> 
-                      <!--Diplôme ou Certificat obtenu, Ecole fréquentée, Pièce jointe-->                 
-                      <div class="form-row mt-4">
-                        <div class="col-10 col-sm mt-5 mt-sm-0">
-                          <label for="">Certificat/Diplôme obtenu <strong class="text-danger">*</strong></label>
-                          <input class="multisteps-form__input form-control" name="etude_un" id="etude_un" type="text" placeholder="Saisissez votre orientation" required/>
-                        </div>
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
+                        </div>							
+                        <!--Ecole fréquentée-->
+                        <div class="form-row p-2 ">
                           <label for="">Ecole/Université<strong class="text-danger">*</strong></label>
                           <input class="multisteps-form__input form-control" name="institut_etude_un" id="institut_etude_un" type="text" placeholder="Saisissez l'institution de formation" required/>
-                        </div> 
-                        <div class="col-12 col-sm">
-                          <label for="">Pièce jointe </label>
-                          <div class="button-row d-flex mt-0">
-                            <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary " accept="image/png, image/jpeg, .pdf">                                   
+                        </div>
+                        <!--Diplôme ou Certificat obtenu-->
+                        <div class="form-row p-2">
+                          <label for="">Certificat/Diplôme<strong class="text-danger">*</strong></label>
+                          <input class="multisteps-form__input form-control" name="etude_un" id="etude_un" type="text" placeholder="Saisissez votre orientation" required/>
+                        </div>
+                        <!--Période de la formation & Pièce jointe-->
+                        <div class="form-row text-left p-2">
+                          <!--Période de la formation-->
+                          <div class="col-sm-3 ">
+                            <label for="">Début</label>
+                            <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
+                          </div> 
+                          <div class="col-sm-3">
+                            <label for="">Fin</label>
+                            <input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />
                           </div>
-                          <small><i>png, jpeg, pdf</i></small>
-                        </div>                                                          
-                      </div>
-                      <!--Ajouter ou supprimer une formation-->                 
-                      <div class="form-row">
-                        <div class="col col-sm">                          
-                          <button class="btn btn-outline-success ml-2" type="button" id="btnAjouter" title="addEducation">Ajouter</button>
-                          <button class="btn btn-outline-danger ml-2" type="button" id="btnSupprimer" title="addEducation">Supprimer</button>
-                        </div>                                                                                                        
+                          <!--Pièce jointe-->	
+                          <div class=" col col-sm">
+                            <label for="">Pièce jointe </label>								
+                            <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary " accept="image/png, image/jpeg, .pdf">                                   
+                            <small><i>png, jpeg, pdf</i></small>
+                          </div>                                                          
+                        </div>						
+                      </div>			
+                      
+                      <!--Boutton Supprimer-->
+                      <div class="col-sm-2 pt-sm-0">
+                      <button class="btn btn-outline-danger" type="button" id="DeleteRow" title="DeleteRow">Supprimer</button>
                       </div>
                     </div>
+                    
+                    <!--Nouvelle instance de Formation-->
+                    <div id="newinput" class="mt-sm-2 mb-sm-2"></div>
+                  
+                  </div>                  
+                  
+                  <!--Boutton pour ajouter une formation-->			
+                  <div class="row mt-sm-2 ml-sm-0 p-0">                    
+                    <button class="btn btn-outline-secondary add_item_btn" type="button" id="rowAdder" title="rowAdder">Ajouter une formation</button>
                   </div>
                   
                   <!--Navigation button-->
@@ -590,18 +601,79 @@
 
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.css'></script>
   <script src="script/Js/script.js"></script>
 
-  <script>
+  <script type="text/javascript">
+
+    //Function to dynamically add input field in the Education section
+    $("#rowAdder").click(function () {
+      newRowAdd =
+        '<div class="row" id="education">' + 
+            
+          '<div class="col col-sm ml-sm-4 border">' +
+                                            
+          '<div class="form-row p-2">' +
+            '<label for="">Domaine de Formation<strong class="text-danger">*</strong></label>' +
+            '<input class="multisteps-form__input form-control" name="formation_un" id="formation_un" type="text" placeholder="Saisissez le domaine de formation" required/>' +
+          '</div>' +						
+          
+          '<div class="form-row p-2 ">' +
+            '<label for="">Ecole/Université<strong class="text-danger">*</strong></label>' +
+            '<input class="multisteps-form__input form-control" name="institut_etude_un" id="institut_etude_un" type="text" placeholder="Saisissez l\'institution de formation" required/>' +
+          '</div>' +
+          
+          '<div class="form-row p-2">' +
+            '<label for="">Certificat/Diplôme<strong class="text-danger">*</strong></label>' +
+            '<input class="multisteps-form__input form-control" name="etude_un" id="etude_un" type="text" placeholder="Saisissez votre orientation" required/>' +
+          '</div>' +
+          
+          '<div class="form-row text-left p-2">' +
+            
+            '<div class="col-sm-3 ">' +
+              '<label for="">Début</label>' +
+              '<input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>' +
+            '</div>' +
+            '<div class="col-sm-3">' +
+              '<label for="">Fin</label>' +
+              '<input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />' +
+            '</div>' +
+            
+            '<div class=" col col-sm">' +
+              '<label for="">Pièce jointe </label>' +
+              '<input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary " accept="image/png, image/jpeg, .pdf">' +                                   
+              '<small><i>png, jpeg, pdf</i></small>' +
+            '</div>' +                                                          
+          '</div>' +						
+          '</div>' +			
+          
+          '<div class="col-sm-2 pt-sm-0">' +
+          '<button class="btn btn-outline-danger" type="button" id="DeleteRow" title="DeleteRow">Supprimer</button>' +
+          '</div>' +
+        '</div>'
+
+			$('#newinput').append(newRowAdd);
+        });
+  
+		//Supprimer une instance de formation
+		$("body").on("click", "#DeleteRow", function () {
+            $(this).parents("#education").remove();
+        });
+    
+
+
+    //Function to clear all input fields
     function clearTextBoxes(){
-    var elements = document.getElementsByTagName("input");
-    for (var ii=0; ii < elements.length; ii++) {
-      if (elements[ii].type == "text" || elements[ii].type == "email" || elements[ii].type == "number" || elements[ii].type == "date") {
-        elements[ii].value = "";
+      var elements = document.getElementsByTagName("input");
+      for (var ii=0; ii < elements.length; ii++) {
+        if (elements[ii].type == "text" || elements[ii].type == "email" || elements[ii].type == "number" || elements[ii].type == "date") {
+          elements[ii].value = "";
+        }
       }
     }
-  }
     
+
+    //Field validation functions
   function validation_phase1(){
     var form_inscription=document.getElementById('form_inscription');
     var denom_entreprise=document.getElementById('denom_entreprise');
