@@ -10,449 +10,616 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="script/Css/style.css">
+    <link rel="stylesheet" href="script/Css/B_stylepage.css">
     </head>
 
     <body>
 
 
-    <!--PEN HEADER-->
-    <header class="header">
-    <h2 class="header__title">Formulaire de Candidature</h2>
-    <button class="btn btn-outline-success btn-lg" onclick="clearTextBoxes()">Réinitialiser</button>
-    </header>
-    <!--PEN CONTENT     -->
-    <div class="content">
-    <!--content inner-->
-    <div class="content__inner">
+        <!--PEN HEADER-->
+        <header class="header">
+        <h2 class="header__title">Formulaire de Candidature</h2>
+        <button class="btn btn-outline-success btn-lg" onclick="clearTextBoxes()">Réinitialiser</button>
+        </header>
+        <!--PEN CONTENT     -->
+        <div class="content">
+            <!--content inner-->
+            <div class="content__inner">
 
-        <!--Multistep form main container-->
-        <div class="container overflow-hidden">
-        
-        <!--multisteps-form-->
-        <div class="multisteps-form">
+                <!--Multistep form main container-->
+                <div class="container overflow-hidden">
 
-            <!--progress bar-->
-            <div class="row">
-            <div class="col m-auto">
-                <div class="multisteps-form__progress">
-                <button class="multisteps-form__progress-btn js-active" type="button" title="User Info">Identité du Candidat</button>
-                <button class="multisteps-form__progress-btn" type="button" title="Address">Education</button>
-                <button class="multisteps-form__progress-btn" type="button" title="Order Info">Personnes de Réf.</button>
-                <button class="multisteps-form__progress-btn" type="button" title="Comments">Soumission</button>
+                    <!--multisteps-form-->
+                    <div class="multisteps-form">
+
+                        <!--progress bar-->
+                        <div class="row">
+                            <div class="col m-auto">
+                                <div class="multisteps-form__progress">
+                                    <button class="multisteps-form__progress-btn js-active" type="button" title="Opening details">Détails sur l'offre</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Personal info">Informations personnelles</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Education">Etudes</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Experience">Expérience</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Accomplishments">Accomplissements</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Languages">Langues</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="People of refernce">Références</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Submission">Soumission</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--form panels-->
+                        <div class="row">
+                            <div class="col-sm-10 m-auto">
+                                <form class="multisteps-form__form bg-light text-left" id="form_Candidat">
+
+                                    <!--single form panel - Détails sur l'offre d'emploi-->
+                                    <div class="multisteps-form__panel shadow p-4 rounded bg-light js-active" data-animation="slideHorz">
+                                        <h3 class="multisteps-form__title">Détails sur l'offre</h3><hr>
+                                        <div class="multisteps-form__content">
+                                            <!--Titre de l'offre-->
+                                            <div class="form-row mt-sm-4">
+                                                <label for="">Poste</label>
+                                                <input class="multisteps-form__input form-control" name="position" id="position" type="text" placeholder="Titre du Poste"/>
+                                            </div>
+                                            <!--Référence de l'offre-->
+                                            <div class="form-row mt-sm-4">
+                                                <label for="">Référence</label>
+                                                <input class="multisteps-form__input form-control" name="position_ref" id="position_ref" type="text" placeholder="Veuillez coller le numéro de référence de l'offre ici"/>
+                                            </div>  
+                                            <!--Dates de l'offre-->                    
+                                            <div class="form-row mt-sm-2">
+                                                <div class="col col-sm">
+                                                    <label for="">Date de publication</label>
+                                                    <input class="multisteps-form__input form-control" name="posting_date" id="posting_date" type="date" />
+                                                </div>
+                                                <div class="col col-sm">
+                                                    <label for="">Date d'expiration</label>
+                                                    <input class="multisteps-form__input form-control" name="closing_date" id="closing_date" type="date" />
+                                                </div>              
+                                            </div>
+                                            
+                                                                
+                                        </div>
+                                        
+                                        <!--Navigation button-->
+                                        <div class="button-row d-flex mt-4">
+                                            <button onclick="validation_phase1()" class="btn btn-primary ml-auto js-btn-next" id="btn_suivant1" type="button" title="Next">Suivant</button>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <!--single form panel - Informations personnelles du candidat-->
+                                    <div class="multisteps-form__panel shadow p-4 rounded bg-light" data-animation="slideHorz">
+                                        <h3 class="multisteps-form__title">Informations personnelles</h3><hr>
+                                        <div class="multisteps-form__content">
+                                            <!--Nom complet-->
+                                            <div class="form-row mt-sm-4">
+                                                <div class="col col-sm">
+                                                    <label for="firstname">Prénom<strong class="text-danger">*</strong></label>
+                                                    <input class="multisteps-form__input form-control" name="firstname" id="firstname" type="text" placeholder="Premier prénom" required/>
+                                                </div>
+                                                <div class="col col-sm">
+                                                    <label for="middle_name">Postnom</label>
+                                                    <input class="multisteps-form__input form-control" name="middle_name" id="middle_name" type="text" placeholder="Deuxième prénom"/>
+                                                </div>
+                                                <div class="col col-sm">
+                                                    <label for="lastname">Nom <strong class="text-danger">*</strong></label>
+                                                    <input class="multisteps-form__input form-control" name="lastname" id="lastname" type="text" placeholder="Nom de famille" required/>
+                                                </div>
+                                            </div>                      
+                                            <!--Lieu, date de naissance et sexe-->   
+                                            <div class="form-row mt-sm-2">
+                                                <div class="col col-sm">
+                                                    <label for="">Lieu de Naissance</label>
+                                                    <input class="multisteps-form__input form-control" name="lieunaiss" id="lieunaiss" type="text" placeholder="Ville, Pays"/>
+                                                </div>            
+                                                <div class="col col-sm">
+                                                    <label for="">Date de Naissance</label>
+                                                    <input class="multisteps-form__input form-control" name="datenaiss" id="datenaiss" type="date" />
+                                                </div>                    
+                                                <div class="col col-sm-2">
+                                                    <label for="">Sexe</label>
+                                                    <select class="multisteps-form__select form-control" name="sexe" id="sexe">
+                                                        <option selected="selected" value="">...</option>
+                                                        <option>M</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </div>                    
+                                            </div>
+                                            <!--Etat-civil et nombre d'enfants-->
+                                            <div class="form-row mt-sm-2">
+                                                <div class="col col-sm">
+                                                    <label for="">Etat Civil</label>
+                                                    <select class="multisteps-form__select form-control" name="etatcivil" id="etatcivil">
+                                                        <option selected="selected" value="">...</option>
+                                                        <option>Célibataire</option>
+                                                        <option>Marié(e)</option>
+                                                        <option>Divorcé(e)</option>
+                                                        <option>Veuf(veuve)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col col-sm-4">
+                                                    <label for="">Nombre d'enfants</label>
+                                                    <input class="multisteps-form__input form-control" name="nbreenfant" id="nbreenfant" type="number"/>
+                                                </div>
+                                            </div>
+                                            <!--Nationalité-->
+                                            <div class="form-row mt-4">
+                                                <label for="">Nationalité <strong class="text-danger">*</strong></label>
+                                                <select class="multisteps-form__select form-control" name="nationalite" id="nationalite" required>
+                                                    <option selected="selected" value="">Sélectionnez un pays...</option>
+                                                    <option value="congolaise RDC">Congo, RD</option>
+                                                </select>
+                                            </div>
+                                            <!--Numéros de téléphone-->
+                                            <div class="form-row mt-4">
+                                                <div class="col col-sm">
+                                                    <label for="phone1">Téléphone (Professionnel)</label>
+                                                    <input class="multisteps-form__input form-control" name="phone1" id="phone1" type="text" placeholder="ex: +243-855555555"/>
+                                                </div>
+                                                <div class="col col-sm">
+                                                    <label for="phone2">Téléphone (Domicile)</label>
+                                                    <input class="multisteps-form__input form-control" name="phone2" id="phone2" type="text" placeholder="ex: +243-855555555"/>
+                                                </div>
+                                            </div>
+                                            <!--Adresse email-->
+                                            <div class="form-row mt-4">
+                                                <label for="">Adresse email</label>
+                                                <input class="multisteps-form__input form-control" name="email_Candidat" id="email_Candidat" type="email" placeholder="ex: dummy@dummy.com"/>
+                                            </div>             
+                                            <!--Adresse domicile-->
+                                            <div class="form-row mt-4 pt-sm-2">                    
+                                                <label for="">Adresse Domicile</label>
+                                                <input class="multisteps-form__input form-control mt-sm-2" type="text" name="avenue" id="avenue" placeholder="rue/avenue/bloc"/>
+                                                <input class="multisteps-form__input form-control mt-sm-2" type="text" name="numparcelle" id="numparcelle" placeholder="numéro parcellaire/appartement"/>
+                                                <input class="multisteps-form__input form-control mt-sm-2" type="text" name="quartier" id="quartier" placeholder="quartier/cité"/>
+                                                <input class="multisteps-form__input form-control mt-sm-2" type="text" name="commune" id="commune" placeholder="commune/territoire"/>
+                                                <input class="multisteps-form__input form-control mt-sm-2" name="ville" id="ville" type="text" placeholder="ville/village"/>
+                                                
+                                                <select class="multisteps-form__select form-control mt-sm-2" name="pays_Candidat" id="pays_Candidat">
+                                                    <option selected="selected">Sélectionnez un pays...</option>
+                                                    <option>Congo, RD</option>
+                                                </select>
+                                            </div>                             
+                                            
+                                            <!--Navigation button-->
+                                            <div class="row">                    
+                                                <div class="button-row d-flex mt-4 col-12">
+                                                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+                                                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--single form panel - -Etudes faites-->
+                                    <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
+                                        <h3 class="multisteps-form__title">Etudes faites</h3>
+                                        <div class="multisteps-form__content">
+                                            <hr>                                        
+                                            <!--Education ou Formation suivie-->
+                                            <div class="row" >
+                                                <!--Une instance de Formation-->	
+                                                <div class="row mb-3 mt-sm-2" id="education">
+                                                    <!--Champs de saisie pour une formation-->	
+                                                    <div class="col col-sm ml-sm-4 border">
+                                                        <!--Domaine de formation-->																	
+                                                        <div class="form-row p-2">
+                                                            <label for="">Domaine de Formation<strong class="text-danger">*</strong></label>
+                                                            <input class="multisteps-form__input form-control" name="formation_un" id="formation_un" type="text" placeholder="Saisissez le domaine de formation" required/>
+                                                        </div>							
+                                                        <!--Ecole fréquentée-->
+                                                        <div class="form-row p-2 ">
+                                                            <label for="">Ecole/Université<strong class="text-danger">*</strong></label>
+                                                            <input class="multisteps-form__input form-control" name="institut_etude_un" id="institut_etude_un" type="text" placeholder="Saisissez l'institution de formation" required/>
+                                                        </div>
+                                                        <!--Diplôme ou Certificat obtenu-->
+                                                        <div class="form-row p-2">
+                                                            <label for="">Certificat/Diplôme<strong class="text-danger">*</strong></label>
+                                                            <input class="multisteps-form__input form-control" name="etude_un" id="etude_un" type="text" placeholder="Saisissez votre orientation" required/>
+                                                        </div>
+                                                        <!--Période de la formation & Pièce jointe-->
+                                                        <div class="form-row text-left p-2">
+                                                            <!--Période de la formation-->
+                                                            <div class="col col-sm ">
+                                                                <label for="">Début</label>
+                                                                <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
+                                                            </div> 
+                                                            <div class="col col-sm">
+                                                                <label for="">Fin</label>
+                                                                <input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />
+                                                            </div>
+                                                            <!--Pièce jointe-->	
+                                                            <div class=" col col-sm">
+                                                                <label for="">Pièce jointe </label>								
+                                                                <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary " accept="image/png, image/jpeg, .pdf">                                   
+                                                                <small><i>png, jpeg, pdf</i></small>
+                                                            </div>                                                          
+                                                        </div>						
+                                                    </div>			
+                                                
+                                                    <!--Boutton Supprimer-->
+                                                    <div class="col-sm-2 pt-sm-0">
+                                                        <button class="btn btn-outline-danger" type="button" id="DeleteRow" title="DeleteRow">Supprimer</button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!--Nouvelle instance de Formation-->
+                                                <div id="newinput"></div>
+                                            
+                                            </div>
+                                        
+                                            <!--Bouttons pour ajouter une formation-->			
+                                            <div class="row mt-sm-2 ml-sm-0 p-0">                    
+                                                <button class="btn btn-outline-secondary add_item_btn" type="button" id="rowAdder" title="rowAdder">Ajouter une formation</button>
+                                            </div>
+
+                                            <!--Navigation button-->
+                                            <div class="row">                    
+                                                <div class="button-row d-flex mt-4 col-12">
+                                                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+                                                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!--single form panel - Expérience professionnelle-->
+                                    <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
+                                        <h3 class="multisteps-form__title">Expérience professionnelle</h3>
+                                        <div class="multisteps-form__content">
+                                            <hr>
+                                            <!--Une instance d'expérience-->	
+                                            <div class="row mb-3 mt-sm-2" id="education">
+                                                <!--Champs de saisie pour une expérience-->	
+                                                <div class="col col-sm ml-sm-4 border">
+                                                    <!--Poste-->																	
+                                                    <div class="form-row p-2">
+                                                        <label for="past_position">Poste/Fonction<strong class="text-danger">*</strong></label>
+                                                        <input class="multisteps-form__input form-control" name="past_position" id="past_position" type="text" placeholder="Saisissez le domaine de formation" required/>
+                                                    </div>							
+                                                    <!--Nom de l'entreprise-->
+                                                    <div class="form-row p-2 ">
+                                                        <label for="business_name">Nom de l'Entreprise<strong class="text-danger">*</strong></label>
+                                                        <input class="multisteps-form__input form-control" name="business_name" id="business_name" type="text" placeholder="Saisissez l'institution de formation" required/>
+                                                    </div>
+                                                    <!--Localisation de l'entreprise-->
+                                                    <div class="form-row p-2">
+                                                        <label for="business_location">Localisation de l'Entreprise<strong class="text-danger">*</strong></label>
+                                                        <input class="multisteps-form__input form-control" name="business_location" id="business_location" type="text" placeholder="Saisissez votre orientation" required/>
+                                                    </div>
+                                                    <!--Période de prestation-->
+                                                    <div class="form-row text-left p-2">
+                                                        <!--Début-->
+                                                        <div class="col col-sm">
+                                                            <label for="">Début</label>
+                                                            <input class="multisteps-form__input form-control" type="date" placeholder="Saisissez votre nom de famille"/>
+                                                        </div>
+                                                        <!--Début--> 
+                                                        <div class="col col-sm">
+                                                            <label for="">Fin</label>
+                                                            <input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />
+                                                        </div>                                                                                                                     
+                                                    </div>
+                                                    <!--Raison de démission-->
+                                                    <div class="form-row p-2">
+                                                        <label for="quit_reason">Raison de démission<strong class="text-danger">*</strong></label>
+                                                        <textarea class="multisteps-form__input form-control" name="quit_reason" id="quit_reason" placeholder="Saisissez la raison pour laquelle vous avez quitté" required></textarea>
+                                                    </div>
+                                                    <!--Réalisations-->
+                                                    <div class="form-row p-2">
+                                                        <label for="duties">Réalisations<strong class="text-danger">*</strong></label>
+                                                        <textarea class="multisteps-form__input form-control" rows="4" name="duties" id="duties" placeholder="Saissez les grandes lignes de vos réalisations." required></textarea>
+                                                    </div>						
+                                                </div>			
+                                            
+                                                <!--Boutton Supprimer-->
+                                                <div class="col-sm-2 pt-sm-0">
+                                                    <button class="btn btn-outline-danger" type="button" id="DeleteRow" title="DeleteRow">Supprimer</button>
+                                                </div>
+                                            </div>
+                                            
+                                            <!--Nouvelle instance de Formation-->
+                                            <div id="newinput"></div>
+                                            
+                                            <!--Bouttons pour ajouter une formation-->			
+                                            <div class="row mt-sm-2 ml-sm-0 p-0">                    
+                                                <button class="btn btn-outline-secondary add_item_btn" type="button" id="rowAdder" title="rowAdder">Ajouter une expérience</button>
+                                            </div>
+
+                                            <!--Navigation button-->
+                                            <div class="row">                    
+                                                <div class="button-row d-flex mt-4 col-12">
+                                                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+                                                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!--single form panel - Accomplissements-->
+                                    <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
+                                        <h3 class="multisteps-form__title">Accomplissements</h3>
+                                        <div class="multisteps-form__content">
+                                            <hr>
+                                            <!--Une instance d'accomplissement-->	
+                                            <div class="row mb-3 mt-sm-2" id="accomplishment">
+                                                <!--Champs de saisie pour une accomplissement-->	
+                                                <div class="col col-sm ml-sm-4 border">
+                                                    <!--Titre -->																	
+                                                    <div class="form-row p-2">
+                                                        <label for="accomp_title">Titre</label>
+                                                        <input class="multisteps-form__input form-control" name="accomp_title" id="accomp_title" type="text" placeholder="Saisissez un accomplissement"/>
+                                                        
+                                                    </div>							
+                                                    <!--Nom de l'entité-->
+                                                    <div class="form-row p-2 ">
+                                                        <label for="accomp_entity">Nom de l'Institution</label>
+                                                        <input class="multisteps-form__input form-control" name="accomp_entity" id="accomp_entity" type="text" placeholder="Saisissez le nom l'institution." />
+                                                    </div>
+                                                    <!--Localisation de l'entité-->
+                                                    <div class="form-row p-2">
+                                                        <label for="entity_location">Localisation de l'Institution</label>
+                                                        <input class="multisteps-form__input form-control" name="entity_location" id="entity_location" type="text" placeholder="Saisissez le nom de l'Institution" />
+                                                    </div>
+                                                    
+                                                    <!--Date & Pièce jointe-->
+                                                    <div class="form-row">
+                                                        <div class="col col-sm">
+                                                            <label for="">Date</label>
+                                                            <input class="multisteps-form__input form-control" type="date"/>
+                                                        </div>
+                                                        <div class="col col-sm">                                                        
+                                                            <label for="accomp_file">Pièce jointe </label>								
+                                                            <input type="file" name="accomp_file" id="accomp_file" class="btn btn-primary " accept="image/png, image/jpeg, .pdf">                                   
+                                                            <small><i>png, jpeg, pdf</i></small>                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>			
+                                            
+                                                <!--Boutton Supprimer-->
+                                                <div class="col-sm-2 pt-sm-0">
+                                                    <button class="btn btn-outline-danger" type="button" id="DeleteRow" title="DeleteRow">Supprimer</button>
+                                                </div>
+                                            </div>
+                                            
+                                            <!--Nouvelle instance de Formation-->
+                                            <div id="newinput"></div>
+                                            
+                                            
+                                        
+                                            <!--Bouttons pour ajouter une expérience-->			
+                                            <div class="row mt-sm-2 ml-sm-0 p-0">                    
+                                                <button class="btn btn-outline-secondary add_item_btn" type="button" id="rowAdder" title="rowAdder">Ajouter un accomplissement</button>
+                                            </div>
+
+                                            <!--Navigation button-->
+                                            <div class="row">                    
+                                                <div class="button-row d-flex mt-4 col-12">
+                                                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+                                                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!--single form panel - Langues-->
+                                    <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
+                                        <h3 class="multisteps-form__title">Langues</h3>
+                                        <div class="multisteps-form__content">
+                                            <hr>
+                                            <!--Une instance d'une langue-->	
+                                            <div class="row mb-3 mt-sm-2" id="language_row">
+                                                <!--Champs de saisie pour une langue-->	
+                                                <div class="col col-sm ml-sm-4 border">
+                                                    <!--Langue -->																	
+                                                    <div class="form-row p-2">
+                                                        <label for="language">Langue</label>
+                                                        <input class="multisteps-form__input form-control" name="language" id="language" type="text" placeholder="Saisissez une langue"/>
+                                                    </div>					
+                                                    
+                                                    <!--Niveau dans la langue-->
+                                                    <div class="form-row">
+                                                        <div class="col col-sm">
+                                                            <label for="">Parlé</label>                                                            
+                                                            <select class="multisteps-form__select form-control" name="language_spoken" id="language_spoken">
+                                                                <option selected="selected" value="">...</option>
+                                                                <option>Niveau 1</option>
+                                                                <option>Niveau 2</option>
+                                                                <option>Niveau 3</option>
+                                                                <option>Niveau 4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col col-sm">
+                                                            <label for="">Ecrit</label>                                                            
+                                                            <select class="multisteps-form__select form-control" name="language_written" id="language_written">
+                                                                <option selected="selected" value="">...</option>
+                                                                <option>Niveau 1</option>
+                                                                <option>Niveau 2</option>
+                                                                <option>Niveau 3</option>
+                                                                <option>Niveau 4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col col-sm">
+                                                            <label for="">Lu</label>                                                            
+                                                            <select class="multisteps-form__select form-control" name="language_read" id="language_read">
+                                                                <option selected="selected" value="">...</option>
+                                                                <option>Niveau 1</option>
+                                                                <option>Niveau 2</option>
+                                                                <option>Niveau 3</option>
+                                                                <option>Niveau 4</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>			
+                                            
+                                                <!--Boutton Supprimer-->
+                                                <div class="col-sm-2 pt-sm-0">
+                                                    <button class="btn btn-outline-danger" type="button" id="DeleteRow" title="DeleteRow">Supprimer</button>
+                                                </div>
+                                            </div>
+                                            
+                                            <!--Nouvelle instance de Formation-->
+                                            <div id="newinput"></div>
+                                            
+                                            
+                                        
+                                            <!--Bouttons pour ajouter une expérience-->			
+                                            <div class="row mt-sm-2 ml-sm-0 p-0">                    
+                                                <button class="btn btn-outline-secondary add_item_btn" type="button" id="rowAdder" title="rowAdder">Ajouter une langue</button>
+                                            </div>
+
+                                            <!--Navigation button-->
+                                            <div class="row">                    
+                                                <div class="button-row d-flex mt-4 col-12">
+                                                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+                                                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!--single form panel - Personnes de référence-->
+                                    <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
+                                        <h3 class="multisteps-form__title">Personnes de référence</h3>
+                                        <div class="multisteps-form__content">
+                                        <hr>
+                                        <div class="form-row mt-4">                    
+                                            <div class="col-12 col-sm-4 mt-0 mt-sm-0">
+                                                <label for="">Personne 1</label>
+                                                <input class="multisteps-form__input form-control" name="noms_personne_un" id="noms_personne_un" type="text" placeholder="Nom complet de la personne"/>
+                                            </div>
+                                            <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                                            <label for="">Organisation/Entreprise</label>
+                                            <input class="multisteps-form__input form-control" name="organisation_personne_un" id="organisation_personne_un" type="text" placeholder="Nom de l'organisation"/>
+                                            </div>
+                                            <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                                            <label for="">Fonction</label>
+                                            <input class="multisteps-form__input form-control" name="fonction_personne_un" id="fonction_personne_un" type="text" placeholder="Saisissez la fonction"/>
+
+                                            </div>                                                          
+                                        </div>
+                                        <div class="form-row mt-4">
+                                            <div class="col-10 col-sm mt-4 mt-sm-0">
+                                            <label for="">Téléphone</label>
+
+                                            <input class="multisteps-form__input form-control" name="telephone_personne_un" id="telephone_personne_un" type="text" placeholder="ex: +243-800000000"/>
+                                            </div>
+                                            <div class="col-10 col-sm mt-sm-4">
+                                            <label for="">Adresse électronique</label>
+                                            <input class="multisteps-form__input form-control" name="email_personne_un" id="email_personne_un" type="email" placeholder="Saisissez l'adresse email"/>
+
+                                            </div>
+                                        </div>
+                                        <br><hr>
+                                        <div class="form-row mt-4">                    
+                                            <div class="col-12 col-sm-4 mt-0 mt-sm-0">
+
+                                            <label for="">Personne 2</label>
+                                            <input class="multisteps-form__input form-control" name="noms_personne_deux" id="noms_personne_deux" type="text" placeholder="Nom complet de la personne"/>
+                                            </div>
+                                            <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                                            <label for="">Organisation/Entreprise</label>
+                                            <input class="multisteps-form__input form-control" name="organisation_personne_deux" id="organisation_personne_deux" type="text" placeholder="Nom de l'organisation"/>
+                                            </div>
+                                            <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                                            <label for="">Fonction</label>
+                                            <input class="multisteps-form__input form-control" name="fonction_personne_deux" id="fonction_personne_deux" type="text" placeholder="Saisissez la fonction"/>
+
+                                            </div>                                                          
+                                        </div>
+                                        <div class="form-row mt-4">
+                                            <div class="col-10 col-sm mt-4 mt-sm-0">
+                                            <label for="">Téléphone</label>
+
+                                            <input class="multisteps-form__input form-control" name="telephone_personne_deux" id="telephone_personne_deux" type="text" placeholder="ex: +243-800000000"/>
+                                            </div>
+                                            <div class="col-10 col-sm mt-4 mt-sm-0">
+                                            <label for="">Adresse électronique</label>
+                                            <input class="multisteps-form__input form-control" name="email_personne_deux" id="email_personne_deux" type="email" placeholder="Saisissez l'adresse email"/>
+
+                                            </div>
+                                        </div>
+                                        <br><hr>
+                                        <div class="form-row mt-4">                    
+                                            <div class="col-12 col-sm-4 mt-0 mt-sm-0">
+
+                                            <label for="">Personne 3</label>
+                                            <input class="multisteps-form__input form-control" name="noms_personne_trois" id="noms_personne_trois" type="text" placeholder="Nom complet de la personne"/>
+                                            </div>
+                                            <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                                            <label for="">Organisation/Entreprise</label>
+                                            <input class="multisteps-form__input form-control" name="organisation_personne_trois" id="organisatio_personne_trois" type="text" placeholder="Nom de l'organisation"/>
+                                            </div>
+                                            <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                                            <label for="">Fonction</label>
+                                            <input class="multisteps-form__input form-control" name="fonction_personne_trois" id="fonction_personne_trois" type="text" placeholder="Saisissez la fonction"/>
+
+                                            </div>                                                          
+                                        </div>
+                                        <div class="form-row mt-4">
+                                            <div class="col-10 col-sm mt-4 mt-sm-0">
+                                            <label for="">Téléphone</label>
+
+                                            <input class="multisteps-form__input form-control" name="telephone_personne_trois" id="telephone_personne_trois" type="text" placeholder="ex: +243-800000000"/>
+                                            </div>
+                                            <div class="col-10 col-sm mt-4 mt-sm-0">
+                                            <label for="">Adresse électronique</label>
+                                            <input class="multisteps-form__input form-control" name="email_personne_un" id="email_personne_trois" type="email" placeholder="Saisissez l'adresse email"/>
+
+                                            </div>
+                                        </div>
+                                        <br><hr>                                                           
+                                        </div>
+                                        
+                                        <!--Navigation button-->
+                                        <div class="row">                    
+                                        <div class="button-row d-flex mt-4 col-12">
+                                            <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+
+                                            <button id="btn_suivant2" onclick="validation_phase2()" class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+
+                                        </div>
+                                        </div>
+                                    </div>
+                            
+                                    <!--single form panel - Signature-->
+                                    <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
+                                        <h3 class="multisteps-form__title">Signature et engagement</h3>
+                                        <div class="multisteps-form__content">
+                                            <div class="form-row mt-sm-4 border">                    
+                                                <div class="col col-sm">
+                                                    <label for="">Je témoigne sur honneur que les informations fournies dans ce formulaire sont vraies et dignes de confiance. </label>
+                                                </div>
+                                                <div class="col-2 col-sm-2">
+                                                    <input class="form-check-input" type="checkbox" id="check_terme" name="option1" value="something" unchecked required>
+                                                </div>                                            
+                                            </div>
+
+                                            <!--Navigation buttons-->
+                                            <div class="button-row d-flex mt-4">
+                                                <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+                                                <button class="btn btn-success ml-auto" type="submit" title="Send">Soumettre</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
-
-            <!--form panels-->
-            <div class="row">
-            <div class="col-sm-10 m-auto">
-
-                <form class="multisteps-form__form bg-light" id="form_Candidat">
-
-
-                <!--single form panel - Infos sur le représentant légal-->
-                <div class="multisteps-form__panel shadow p-4 rounded bg-light js-active" data-animation="slideHorz">
-                    <h3 class="multisteps-form__title">Identité du Candidat</h3><hr>
-                    <div class="multisteps-form__content">
-                    <div class="form-row mt-4">
-                        <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <div class="col">
-                            <label for="">Nom</label>
-                        </div>
-                        <div class="col">
-
-                            <input class="multisteps-form__input form-control" name="nom_Candidat" id="nom_Candidat" type="text" placeholder="Votre nom de famille"/>
-
-                        </div>                      
-                        </div>
-                        <div class="col-12 col-sm-4 mt-0 mt-sm-0">
-                        <label for="">Postnom</label>
-
-                        <input class="multisteps-form__input form-control" name="postnom_Candidat" id="postnom_Candidat" type="text" placeholder="Votre postnom"/>
-                        </div>
-                        <div class="col-12 col-sm-4 mt-0 mt-sm-0">
-                        <label for="">Prénom</label>
-                        <input name="prenom_Candidat" id="prenom_Candidat" class="multisteps-form__input form-control" type="text" placeholder="Votre prénom"/>
-
-                        </div>                    
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Lieu de Naissance</label>
-
-                        <input class="multisteps-form__input form-control" name="lieunaiss" id="lieunaiss" type="text" placeholder="Ville, Pays"/>
-                        </div>
-                        <div class="col-10 col-sm-3 mt-4 mt-sm-0">
-                        <label for="">Date de Naissance</label>
-                        <input class="multisteps-form__input form-control" name="datenaiss" id="datenaiss" type="date" />
-                        </div>                    
-                        <div class="col-10 col-sm-1">
-                        <label for="">Sexe</label>
-                        <select class="multisteps-form__select form-control" name="sexe" id="sexe">
-                            <option selected="selected" value="">...</option>
-
-                            <option>M</option>
-                            <option>F</option>
-                        </select>
-                        </div>                    
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="col-10 col-sm-4">
-                        <label for="">Etat Civil</label>
-
-                        <select class="multisteps-form__select form-control" name="etatcivil" id="etatcivil">
-                            <option selected="selected" value="">...</option>
-
-                            <option>Célibataire</option>
-                            <option>Marié(e)</option>
-                            <option>Divorcé(e)</option>
-                            <option>Veuf(veuve)</option>
-                        </select>
-                        </div>
-                        <div class="col-10 col-sm-3">
-                        <label for="">Nombre d'enfants</label>
-
-                        <input class="multisteps-form__input form-control" name="nbreenfant" id="nbreenfant" type="number"/>
-                        </div>
-                        <div class="col-10 col-sm-5 mt-4 mt-sm-0">
-                        <label for="">Pays de Nationalité</label>
-                        <select class="multisteps-form__select form-control" name="nationalite" id="nationalite">
-                            <option selected="selected" value="">Sélectionnez un pays...</option>
-                            <option value="congolaise RDC">Congo, RD</option>
-
-                        </select>
-                        </div>             
-                    </div>
-                    <br><hr>
-                    <div class="form-row mt-4">
-                        <div class="col-10 col-sm-5 mt-4 mt-sm-0">
-                        <label for="">Numéro de téléphone (Inclure l'indicatif)</label>
-
-                        <input class="multisteps-form__input form-control" name="telephone_Candidat" id="telephone_Candidat" type="text" placeholder="ex: +243-855555555"/>
-                        </div>
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Adresse email</label>
-                        <input class="multisteps-form__input form-control" name="email_Candidat" id="email_Candidat" type="email" placeholder="ex: dummy@dummy.com"/>
-
-                        </div>             
-                    </div>
-                    <br><hr>
-                    <div class="form-row mt-4">                    
-                        <div class="col-10 col-sm mt-4 mt-sm">
-                        <label for="">Adresse Domicile</label>                      
-
-                        <input class="multisteps-form__input form-control" type="text" name="avenue" id="avenue" placeholder="rue/avenue/bloc"/>
-                        <input class="multisteps-form__input form-control" type="text" name="numparcelle" id="numparcelle" placeholder="numéro parcellaire/appartement"/>
-                        <input class="multisteps-form__input form-control" type="text" name="quartier" id="quartier" placeholder="quartier/cité"/>
-                        <input class="multisteps-form__input form-control" type="text" name="commune" id="commune" placeholder="commune/territoire"/>
-                        </div>                             
-                    </div>
-                    <div class="form-row ">                    
-                        <div class="col-10 col-sm mt-0 mt-sm">
-                        <input class="multisteps-form__input form-control" name="ville" id="ville" type="text" placeholder="ville/village"/>
-                        </div>
-                        <div class="col-10 col-sm mt-0 mt-sm">
-                        <select class="multisteps-form__select form-control" name="pays_Candidat" id="pays_Candidat">
-                            <option selected="selected">Sélectionnez un pays...</option>
-
-                            <option>Congo, RD</option>
-                        </select>
-                        </div>                             
-                    </div>
-                    <br><hr>
-                    <div class="form-row mt-4">
-                        <div class="col-12 col-sm-7">
-
-                        <label for="">Fonction</label>
-                        <select class="multisteps-form__select form-control" name="fonction_Candidat" id="fonction_Candidat" >
-                            <option selected="selected">Sélectionnez une fonction...</option>
-                            <option>PDG</option>
-                            <option>Gérant</option>
-                            <option>Fondateur</option>
-                            <option>Candidat</option>
-                        </select>
-                        </div>
-                        <div class="col-10 col-sm">
-                        <label for="">Années d'expérience dans le secteur</label>
-                        <input class="multisteps-form__input form-control" name="annexperience" id="annexperience"  type="number" value="0"/>
-
-                        </div>                    
-                    </div> 
-                    <br><hr>               
-                    
-                    <!--Navigation button-->
-                    <div class="button-row d-flex mt-4">
-
-                        <button onclick="validation_phase1()" class="btn btn-primary ml-auto js-btn-next" id="btn_suivant1" type="button" title="Next">Suivant</button>
-
-                    </div>
-                    </div>
-                </div>
-
-                <!--single form panel - -Formation du représentant légal-->
-                <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
-                    <h3 class="multisteps-form__title">Formation scolaire, académique ou professionnelle</h3>
-                    <div class="multisteps-form__content">
-                    <br><hr>
-                    <div class="form-row mt-4">
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Formation 1</label>
-
-                        <input class="multisteps-form__input form-control" name="formation_un" id="formation_un" type="text" placeholder="Saisissez le domaine de formation"/>
-                        </div>
-                        <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                        <label for="">Début</label>
-                        <input class="multisteps-form__input form-control" name="datedebut_formation_un" id="datedebut_formation_un" type="date" />
-                        </div> 
-                        <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                        <label for="">Fin</label>
-                        <input class="multisteps-form__input form-control" name="datefin_formation_un" id="datefin_formation_un" type="date" />
-
-                        </div>                                       
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="col-10 col-sm mt-5 mt-sm-0">
-                        <label for="">Certificat/Diplôme obtenu</label>
-
-                        <input class="multisteps-form__input form-control" name="etude_un" id="etude_un" type="text" placeholder="Saisissez votre orientation"/>
-                        </div>
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Ecole/Université</label>
-                        <input class="multisteps-form__input form-control" name="institut_etude_un" id="institut_etude_un" type="text" placeholder="Saisissez l'institution de formation"/>
-
-                        </div> 
-                        <div class="col-12 col-sm">
-                        <label for="">Pièce jointe</label>
-                        <div class="button-row d-flex mt-0">
-
-                            <input type="file" name="etude_un_piece" id="etude_un_piece" class="btn btn-primary ">                   
-
-                        </div>
-                        </div>                                                          
-                    </div>
-                    <br><hr>
-                    <div class="form-row mt-4">
-
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Formation 2</label>
-                        <input class="multisteps-form__input form-control" name="formation_deux" id="formation_deux" type="text" placeholder="Saisissez le domaine de formation"/>
-                        </div>
-                        <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                        <label for="">Début</label>
-                        <input class="multisteps-form__input form-control" name="datedebut_formation_deux" id="datedebut_formation_deux" type="date" />
-                        </div> 
-                        <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                        <label for="">Fin</label>
-                        <input class="multisteps-form__input form-control" name="datefin_formation_deux" id="datefin_formation_deux" type="date" />
-
-                        </div>                                       
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="col-10 col-sm mt-5 mt-sm-0">
-                        <label for="">Certificat/Diplôme obtenu</label>
-
-                        <input class="multisteps-form__input form-control" name="etude_deux" id="etude_deux" type="text" placeholder="Saisissez votre orientation"/>
-                        </div>
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Ecole/Université</label>
-                        <input class="multisteps-form__input form-control" name="institut_etude_deux" id="institut_etude_deux" type="text" placeholder="Saisissez l'institution de formation"/>
-
-                        </div> 
-                        <div class="col-12 col-sm">
-                        <label for="">Pièce jointe</label>
-                        <div class="button-row d-flex mt-0">
-
-                            <input type="file" name="etude_deux_piece" id="etude_deux_piece" class="btn btn-primary ">                   
-                        </div>
-                        </div>                                           
-                    </div>
-                    <br><hr>
-                    <div class="form-row mt-4">
-                    <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Formation 1</label>
-                        <input class="multisteps-form__input form-control" name="formation_trois" id="formation_trois" type="text" placeholder="Saisissez le domaine de formation"/>
-                        </div>
-                        <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                        <label for="">Début</label>
-                        <input class="multisteps-form__input form-control" name="datedebut_formation_trois" id="datedebut_formation_trois" type="date" />
-                        </div> 
-                        <div class="col-10 col-sm-3 mt-3 mt-sm-0">
-                        <label for="">Fin</label>
-                        <input class="multisteps-form__input form-control" name="datefin_formation_trois" id="datefin_formation_trois" type="date" />
-
-                        </div>                                       
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="col-10 col-sm mt-5 mt-sm-0">
-                        <label for="">Certificat/Diplôme obtenu</label>
-
-                        <input class="multisteps-form__input form-control" name="etude_trois" id="etude_trois" type="text" placeholder="Saisissez votre orientation"/>
-                        </div>
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Ecole/Université</label>
-                        <input class="multisteps-form__input form-control" name="institut_etude_trois" id="institut_etude_trois" type="text" placeholder="Saisissez l'institution de formation"/>
-                        </div> 
-                        <div class="col-12 col-sm">
-                        <label for="">Pièce jointe</label>
-                        <div class="button-row d-flex mt-0">
-                            <input type="file" name="etude_trois_piece" id="etude_trois_piece" class="btn btn-primary ">                   
-                        </div>
-                        </div>                                       
-
-                    </div>
-                    <br><hr>
-
-                    <!--Navigation button-->
-                    <div class="row">                    
-                        <div class="button-row d-flex mt-4 col-12">
-                        <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
-                        <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>  
-
-                    
-                <!--single form panel - Personnes de référence-->
-                <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
-                    <h3 class="multisteps-form__title">Personnes de référence</h3>
-                    <div class="multisteps-form__content">
-                    <br><hr>
-                    <div class="form-row mt-4">                    
-                        <div class="col-12 col-sm-4 mt-0 mt-sm-0">
-                        <label for="">Personne 1</label>
-
-                        <input class="multisteps-form__input form-control" name="noms_personne_un" id="noms_personne_un" type="text" placeholder="Nom complet de la personne"/>
-                        </div>
-                        <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <label for="">Organisation/Entreprise</label>
-                        <input class="multisteps-form__input form-control" name="organisation_personne_un" id="organisation_personne_un" type="text" placeholder="Nom de l'organisation"/>
-                        </div>
-                        <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <label for="">Fonction</label>
-                        <input class="multisteps-form__input form-control" name="fonction_personne_un" id="fonction_personne_un" type="text" placeholder="Saisissez la fonction"/>
-
-                        </div>                                                          
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Téléphone</label>
-
-                        <input class="multisteps-form__input form-control" name="telephone_personne_un" id="telephone_personne_un" type="text" placeholder="ex: +243-800000000"/>
-                        </div>
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Adresse électronique</label>
-                        <input class="multisteps-form__input form-control" name="email_personne_un" id="email_personne_un" type="email" placeholder="Saisissez l'adresse email"/>
-
-                        </div>
-                    </div>
-                    <br><hr>
-                    <div class="form-row mt-4">                    
-                        <div class="col-12 col-sm-4 mt-0 mt-sm-0">
-
-                        <label for="">Personne 2</label>
-                        <input class="multisteps-form__input form-control" name="noms_personne_deux" id="noms_personne_deux" type="text" placeholder="Nom complet de la personne"/>
-                        </div>
-                        <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <label for="">Organisation/Entreprise</label>
-                        <input class="multisteps-form__input form-control" name="organisation_personne_deux" id="organisation_personne_deux" type="text" placeholder="Nom de l'organisation"/>
-                        </div>
-                        <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <label for="">Fonction</label>
-                        <input class="multisteps-form__input form-control" name="fonction_personne_deux" id="fonction_personne_deux" type="text" placeholder="Saisissez la fonction"/>
-
-                        </div>                                                          
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Téléphone</label>
-
-                        <input class="multisteps-form__input form-control" name="telephone_personne_deux" id="telephone_personne_deux" type="text" placeholder="ex: +243-800000000"/>
-                        </div>
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Adresse électronique</label>
-                        <input class="multisteps-form__input form-control" name="email_personne_deux" id="email_personne_deux" type="email" placeholder="Saisissez l'adresse email"/>
-
-                        </div>
-                    </div>
-                    <br><hr>
-                    <div class="form-row mt-4">                    
-                        <div class="col-12 col-sm-4 mt-0 mt-sm-0">
-
-                        <label for="">Personne 3</label>
-                        <input class="multisteps-form__input form-control" name="noms_personne_trois" id="noms_personne_trois" type="text" placeholder="Nom complet de la personne"/>
-                        </div>
-                        <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <label for="">Organisation/Entreprise</label>
-                        <input class="multisteps-form__input form-control" name="organisation_personne_trois" id="organisatio_personne_trois" type="text" placeholder="Nom de l'organisation"/>
-                        </div>
-                        <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <label for="">Fonction</label>
-                        <input class="multisteps-form__input form-control" name="fonction_personne_trois" id="fonction_personne_trois" type="text" placeholder="Saisissez la fonction"/>
-
-                        </div>                                                          
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Téléphone</label>
-
-                        <input class="multisteps-form__input form-control" name="telephone_personne_trois" id="telephone_personne_trois" type="text" placeholder="ex: +243-800000000"/>
-                        </div>
-                        <div class="col-10 col-sm mt-4 mt-sm-0">
-                        <label for="">Adresse électronique</label>
-                        <input class="multisteps-form__input form-control" name="email_personne_un" id="email_personne_trois" type="email" placeholder="Saisissez l'adresse email"/>
-
-                        </div>
-                    </div>
-                    <br><hr>                                                           
-                    </div>
-                    
-                    <!--Navigation button-->
-                    <div class="row">                    
-                    <div class="button-row d-flex mt-4 col-12">
-                        <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
-
-                        <button id="btn_suivant2" onclick="validation_phase2()" class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
-
-                    </div>
-                    </div>
-                </div>
-            
-                <!--single form panel - Signature-->
-                <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
-                    <h3 class="multisteps-form__title">Signature et engagement</h3>
-                    <div class="multisteps-form__content">                     
-                        <hr>                     
-                    
-                    <div class="form-row mt-4 border m-auto">                    
-                        <div class="col-10 col-sm-3">
-                            <label for="">Je témoigne sur honneur que les informations fournies dans ce formulaire sont vraies et dignes de confiance. </label>
-                        </div>
-                        <div class="col-10 col-sm-1">
-
-                        <input class="form-check-input" type="checkbox" id="check_terme" name="option1" value="something" unchecked required>
-
-                        </div>
-                        
-                    </div>
-                    <div class="button-row d-flex mt-4">
-                        <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
-
-                        <button class="btn btn-success ml-auto" type="submit" title="Send">Soumettre</button>
-
-                    </div>
-                    </div>
-                </div>
-                
-                </form>
-            </div>
             </div>
         </div>
-        </div>
-    </div>
-    </div>
+    
 
         <!-- Javascript -->
 
@@ -462,7 +629,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 
-        
+        <script src="script/Js/script.js"></script>
 
         <!--Clear all text fields and reload the page-->
         <script>
