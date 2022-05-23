@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <title>Omega System - Formulaire Candidat</title>
 
-    <!-- Favicon icon -->
+        <!-- Favicon icon -->
+        <link rel="icon" href="assets/images/logo_icon.png" type="image/x-icon">
 
-    <link rel="icon" href="assets/images/logo_icon.png" type="image/x-icon">
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="script/Css/style.css">
-    <link rel="stylesheet" href="script/Css/B_stylepage.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="script/Css/style.css">
+        <link rel="stylesheet" href="script/Css/B_stylepage.css">
     </head>
 
     <body>
@@ -28,7 +27,7 @@
             <div class="content__inner">
 
                 <!--Multistep form main container-->
-                <div class="container overflow-hidden">
+                <div class="container mb-3">
 
                     <!--multisteps-form-->
                     <div class="multisteps-form">
@@ -52,7 +51,7 @@
                         <!--form panels-->
                         <div class="row">
                             <div class="col-sm-10 m-auto">
-                                <form class="multisteps-form__form bg-light text-left" id="form_Candidat">
+                                <form class="multisteps-form__form bg-light text-left needs-validation" id="form_Candidat" novalidate>
 
                                     <!--single form panel - Détails sur l'offre d'emploi-->
                                     <div class="multisteps-form__panel shadow p-4 rounded bg-light js-active" data-animation="slideHorz">
@@ -99,6 +98,9 @@
                                                 <div class="col col-sm">
                                                     <label for="firstname">Prénom<strong class="text-danger">*</strong></label>
                                                     <input class="multisteps-form__input form-control" name="firstname" id="firstname" type="text" placeholder="Premier prénom" required/>
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Veuillez fournir votre prénom avant de continuer. 
                                                 </div>
                                                 <div class="col col-sm">
                                                     <label for="middle_name">Postnom</label>
@@ -182,7 +184,13 @@
                                                     <option selected="selected">Sélectionnez un pays...</option>
                                                     <option>Congo, RD</option>
                                                 </select>
-                                            </div>                             
+                                            </div> 
+                                            <!--Brève description-->
+                                            <div class="form-row mt-4 pt-sm-2">
+                                                <label for="duties">Brève description</label>
+                                                <textarea class="multisteps-form__input form-control" rows="4" name="key-qualifications" data-mdb-showcounter="true" maxlength="500" id="key-qualifications" placeholder="Saissez vos compétences-clés par rapport à l'offre."></textarea>
+                                                <div class="form-helper"><div class="form-counter"></div></div>
+                                            </div>                            
                                             
                                             <!--Navigation button-->
                                             <div class="row">                    
@@ -412,69 +420,95 @@
                                     <!--single form panel - Langues-->
                                     <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
                                         <h3 class="multisteps-form__title">Langues</h3>
-                                        <div class="multisteps-form__content">
+                                        
                                             <hr>
-                                            <!--Une instance d'une langue-->	
-                                            <div class="row mb-3 mt-sm-2" id="language_row">
-                                                <!--Champs de saisie pour une langue-->	
-                                                <div class="col col-sm ml-sm-4 border">
-                                                    <!--Langue -->																	
-                                                    <div class="form-row p-2">
-                                                        <label for="language">Langue</label>
-                                                        <input class="multisteps-form__input form-control" name="language" id="language" type="text" placeholder="Saisissez une langue"/>
-                                                    </div>					
+                                            <!-- HIDDEN DYNAMIC ELEMENT TO CLONE -->
+                                            <!-- you can replace it with any other elements -->
+                                            <div class="form-group dynamic-element" style="display:none">
+                                                <div class="row">
                                                     
-                                                    <!--Niveau dans la langue-->
-                                                    <div class="form-row">
-                                                        <div class="col col-sm">
-                                                            <label for="">Parlé</label>                                                            
-                                                            <select class="multisteps-form__select form-control" name="language_spoken" id="language_spoken">
-                                                                <option selected="selected" value="">...</option>
-                                                                <option>Niveau 1</option>
-                                                                <option>Niveau 2</option>
-                                                                <option>Niveau 3</option>
-                                                                <option>Niveau 4</option>
-                                                            </select>
+                                                    <!-- Replace these fields -->
+                                                    <!--Une instance d'une langue-->	
+                                                    <div class="form-row mb-3 mt-sm-2" id="language_row">
+                                                        <!--Champs de saisie pour une langue-->	
+                                                        <div class="col col-sm ml-sm-4 border">
+                                                            <!--Langue -->																	
+                                                            <div class="form-row p-2">
+                                                                <label for="language">Langue</label>
+                                                                <input class="multisteps-form__input form-control" name="language" id="language" type="text" placeholder="Saisissez une langue"/>
+                                                            </div>					
+                                                            
+                                                            <!--Niveau dans la langue-->
+                                                            <div class="form-row">
+                                                                <div class="col col-sm">
+                                                                    <label for="">Parlé</label>                                                            
+                                                                    <select class="multisteps-form__select form-control" name="language_spoken" id="language_spoken">
+                                                                        <option selected="selected" value="">...</option>
+                                                                        <option>Niveau 1</option>
+                                                                        <option>Niveau 2</option>
+                                                                        <option>Niveau 3</option>
+                                                                        <option>Niveau 4</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col col-sm">
+                                                                    <label for="">Ecrit</label>                                                            
+                                                                    <select class="multisteps-form__select form-control" name="language_written" id="language_written">
+                                                                        <option selected="selected" value="">...</option>
+                                                                        <option>Niveau 1</option>
+                                                                        <option>Niveau 2</option>
+                                                                        <option>Niveau 3</option>
+                                                                        <option>Niveau 4</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col col-sm">
+                                                                    <label for="">Lu</label>                                                            
+                                                                    <select class="multisteps-form__select form-control" name="language_read" id="language_read">
+                                                                        <option selected="selected" value="">...</option>
+                                                                        <option>Niveau 1</option>
+                                                                        <option>Niveau 2</option>
+                                                                        <option>Niveau 3</option>
+                                                                        <option>Niveau 4</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            
                                                         </div>
-                                                        <div class="col col-sm">
-                                                            <label for="">Ecrit</label>                                                            
-                                                            <select class="multisteps-form__select form-control" name="language_written" id="language_written">
-                                                                <option selected="selected" value="">...</option>
-                                                                <option>Niveau 1</option>
-                                                                <option>Niveau 2</option>
-                                                                <option>Niveau 3</option>
-                                                                <option>Niveau 4</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="col col-sm">
-                                                            <label for="">Lu</label>                                                            
-                                                            <select class="multisteps-form__select form-control" name="language_read" id="language_read">
-                                                                <option selected="selected" value="">...</option>
-                                                                <option>Niveau 1</option>
-                                                                <option>Niveau 2</option>
-                                                                <option>Niveau 3</option>
-                                                                <option>Niveau 4</option>
-                                                            </select>
+                                                        <!--Boutton Supprimer-->
+                                                        <div class="col-sm-2 pt-sm-0">
+                                                            <button class="btn btn-outline-danger delete" type="button" >Supprimer</button>
                                                         </div>
                                                     </div>
+                                                    <!-- End of fields-->
+
                                                     
-                                                </div>			
-                                            
-                                                <!--Boutton Supprimer-->
-                                                <div class="col-sm-2 pt-sm-0">
-                                                    <button class="btn btn-outline-danger" type="button" id="DeleteRow" title="DeleteRow">Supprimer</button>
                                                 </div>
                                             </div>
+                                            <!-- END OF HIDDEN ELEMENT -->
                                             
-                                            <!--Nouvelle instance de Formation-->
-                                            <div id="newinput"></div>
+                                            <!--Une instance d'une langue-->	
+                                            <fieldset>
+                                                <div class="dynamic-stuff">
+                                                    <!-- Dynamic element will be cloned here -->
+                                                    <!-- You can call clone function once if you want it to show it a first element-->
+                                                </div>
+                                                
+                                                <!-- Button -->
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <p class="add-one">+ Ajouter une langue</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-8"></div>
+                                                        <div class="col-md-4">
+                                                            <button id="singlebutton" name="singlebutton" class="btn btn-outline-danger">Tout supprimer</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
                                             
                                             
-                                        
-                                            <!--Bouttons pour ajouter une expérience-->			
-                                            <div class="row mt-sm-2 ml-sm-0 p-0">                    
-                                                <button class="btn btn-outline-secondary add_item_btn" type="button" id="rowAdder" title="rowAdder">Ajouter une langue</button>
-                                            </div>
 
                                             <!--Navigation button-->
                                             <div class="row">                    
@@ -484,7 +518,7 @@
                                                 </div>
                                             </div>
 
-                                        </div>
+                                        
                                     </div>
 
                                     <!--single form panel - Personnes de référence-->
@@ -572,8 +606,8 @@
                                             <input class="multisteps-form__input form-control" name="telephone_personne_trois" id="telephone_personne_trois" type="text" placeholder="ex: +243-800000000"/>
                                             </div>
                                             <div class="col-10 col-sm mt-4 mt-sm-0">
-                                            <label for="">Adresse électronique</label>
-                                            <input class="multisteps-form__input form-control" name="email_personne_un" id="email_personne_trois" type="email" placeholder="Saisissez l'adresse email"/>
+                                                <label for="">Adresse électronique</label>
+                                                <input class="multisteps-form__input form-control" name="email_personne_un" id="email_personne_trois" type="email" placeholder="Saisissez l'adresse email"/>
 
                                             </div>
                                         </div>
@@ -582,12 +616,10 @@
                                         
                                         <!--Navigation button-->
                                         <div class="row">                    
-                                        <div class="button-row d-flex mt-4 col-12">
-                                            <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
-
-                                            <button id="btn_suivant2" onclick="validation_phase2()" class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
-
-                                        </div>
+                                            <div class="button-row d-flex mt-4 col-12">
+                                                <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Précédent</button>
+                                                <button id="btn_suivant2" onclick="validation_phase2()" class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Suivant</button>
+                                            </div>
                                         </div>
                                     </div>
                             
@@ -595,12 +627,14 @@
                                     <div class="multisteps-form__panel shadow p-4 rounded " data-animation="slideHorz">
                                         <h3 class="multisteps-form__title">Signature et engagement</h3>
                                         <div class="multisteps-form__content">
-                                            <div class="form-row mt-sm-4 border">                    
-                                                <div class="col col-sm">
-                                                    <label for="">Je témoigne sur honneur que les informations fournies dans ce formulaire sont vraies et dignes de confiance. </label>
-                                                </div>
-                                                <div class="col-2 col-sm-2">
-                                                    <input class="form-check-input" type="checkbox" id="check_terme" name="option1" value="something" unchecked required>
+                                            <div class="form-row mt-sm-4 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                                    <label class="form-check-label" for="invalidCheck">
+                                                        Je confirme que les informations fournies dans ce formulaire sont vraies et dignes de confiance.
+                                                        J'ai lu et j'accepte les <a href="#" target="_blank">termes et conditions</a>. 
+                                                    </label>
+                                                    <div class="invalid-feedback">Vous devez cocher avant de continuer. </div>
                                                 </div>                                            
                                             </div>
 
@@ -630,6 +664,25 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 
         <script src="script/Js/script.js"></script>
+
+        <!--Dynamic fields-->
+        <script type="text/javascript">
+            //Clone the hidden element and shows it
+            $('.add-one').click(function(){
+            $('.dynamic-element').first().clone().appendTo('.dynamic-stuff').show();
+            attach_delete();
+            });
+
+
+            //Attach functionality to delete buttons
+            function attach_delete(){
+            $('.delete').off();
+            $('.delete').click(function(){
+                console.log("click");
+                $(this).closest('.form-group').remove();
+            });
+            }
+        </script>
 
         <!--Clear all text fields and reload the page-->
         <script>
@@ -691,6 +744,9 @@
 
         </script>
 
+
+        
     </body>
+    
 
 </html>
