@@ -9,11 +9,12 @@
         <!-- Favicon icon -->
         <link rel="icon" href="assets/images/logo_icon.png" type="image/x-icon">
 
-        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link rel="stylesheet" href="../../script/Css/style.css">
-        <link rel="stylesheet" href="script/Css/B_stylepage.css">
         
+        <link rel="stylesheet" href="script/Css/B_stylepage.css">
+        <link rel="stylesheet" href="../../script/Css/style.css">
     </head>
 <body> 
     
@@ -29,6 +30,7 @@
 
                 <!--userlogin-form-->
                 <div class="login-form">
+                    
                     <!--form title-->
                     <div class="row">
 
@@ -37,7 +39,7 @@
                             <div class="login-form__title text-center">
                                 <h5>Profitez des avantages incontournables qu'offre</h5>
                                 <div class="login-form__title text-center">
-                                    <?php include('view/omega_header.html') ?>
+                                    <h1><strong style="color:green;">OMEGA</strong><em style="color:skyblue;">System</em></h1>
                                 </div>
                                 <h5>en matière de <strong>"Business Environemental"</strong> en RDC</h5>
                             </div>
