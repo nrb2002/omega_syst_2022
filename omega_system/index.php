@@ -22,9 +22,9 @@
                         //version A0 Oméga System
                         //<!--Navbar-->
                         include('view/navbar.html');
-                //<!--Navbar-->
+                        //<!--Navbar-->
 
-                include_once('controller/user_authentication.php');
+                        include_once('controller/user_authentication.php');
 
 
                         //footer omega système
