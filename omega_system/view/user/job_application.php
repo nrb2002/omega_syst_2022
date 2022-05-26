@@ -16,11 +16,7 @@
     </head>
 
     <body>
-        <header>
-            <!--import navbar-->
-            <?php include('view/navbar.html'); ?>
-        </header>
-
+        
         <!--PEN HEADER-->
         <header class="header">
             <h2 class="header__title">Formulaire de Candidature</h2>
@@ -636,11 +632,7 @@
                 </div>
         </main>
 
-        <div class="row">
-            <!--import footer-->
-            <?php include('view/footer.html'); ?>
-        </div>
-
+        
         <!-- Javascript -->
 
         <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
