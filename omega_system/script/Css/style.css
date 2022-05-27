@@ -58,9 +58,10 @@ footer{
   width: 100%;
   bottom: 0;
   z-index: 9999;
-  height: 5%;
+  height: 200px;
   bottom: 0;
-  margin-top: auto;
+  position: relative;
+  margin-top: 1.5em;
 }
 
 
@@ -124,6 +125,8 @@ footer{
 .content {
   width: 95%;
   margin: 0 auto 50px;
+  height: auto;
+  overflow: hidden;
 }
 
 .content__title {
