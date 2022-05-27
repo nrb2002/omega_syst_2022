@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-fr" >
     <head>
-    <meta charset="UTF-8">
-    <title>Curriculum Vitae</title>
+        <meta charset="UTF-8">
+        <title>Curriculum Vitae</title>
 
         <!-- Favicon icon -->
         <link rel="icon" href="assets/images/logo_icon.png" type="image/x-icon">
@@ -23,7 +23,7 @@
             <button class="btn btn-outline-success btn-lg" onclick="clearTextBoxes()">Réinitialiser</button>
         </header>
         <!--PEN CONTENT     -->
-        <main class="mb-3">
+        <main class="content mb-3">
             <!--content inner-->
             
 
@@ -42,7 +42,7 @@
                                     <button class="multisteps-form__progress-btn" type="button" title="Education">Etudes</button>
                                     <button class="multisteps-form__progress-btn" type="button" title="Experience">Expérience</button>
                                     <button class="multisteps-form__progress-btn" type="button" title="Accomplishments">Accomplissements</button>
-                                    <button class="multisteps-form__progress-btn" type="button" title="Languages">Langues</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Languages" id="language_progress_btn">Langues</button>
                                     <button class="multisteps-form__progress-btn" type="button" title="People of refernce">Références</button>
                                     <button class="multisteps-form__progress-btn" type="button" title="Submission">Soumission</button>
                                 </div>
@@ -479,7 +479,7 @@
                                         <!-- END OF HIDDEN ELEMENT -->
                                         
                                         <!--Une instance d'une langue-->
-                                        <div class="form-group dynamic-stuff">
+                                        <div class="form-group dynamic-language-rows">
                                             <!-- Dynamic element will be cloned here -->
                                             <!-- You can call clone function once if you want it to show it a first element-->
                                         </div>
@@ -487,7 +487,7 @@
                                         <!-- Add Button -->
                                         <div class="form-group mt-sm-2">                                           
                                             <div class="col-md-12">
-                                                <p class="btn btn-outline-secondary add-one">+ Ajouter une langue</p>
+                                                <p class="btn btn-outline-secondary addLanguageRow">+ Ajouter une langue</p>
                                             </div>
                                         </div>
                                         
@@ -631,7 +631,6 @@
                     </div>
                 </div>
         </main>
-
         
         <!-- Javascript -->
 
@@ -641,9 +640,11 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 
-        <script type="text/javascript" src="script/Js/script.js"></script>
+        
 
-        <!--Dynamic fields-->
+        <script type="text/javascript" src="script/Js/form.dynamic-inputs.js"></script>
+        <script type="text/javascript" src="script/Js/script.js"></script>
+        <!--Dynamic fields
         <script type="text/javascript">
             //Clone the hidden element and shows it
             $('.add-one').click(function(){
@@ -660,7 +661,7 @@
                 $(this).closest('.form-group').remove();
             });
             }
-        </script>
+        </script>-->
 
         <!--reset input fields-->
         <script type="text/javascript">
