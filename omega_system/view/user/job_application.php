@@ -662,7 +662,7 @@
             }
         </script>
 
-        <!--reset inputs-->
+        <!--reset input fields-->
         <script type="text/javascript">
             function clearTextBoxes(){
                 var elements = document.getElementsByTagName("input");
@@ -674,7 +674,7 @@
             }
         </script>
 
-        <!--Form validation-->
+        <!--Form validations-->
         <script type="text/javascript">
               
 
