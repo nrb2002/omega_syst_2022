@@ -3,9 +3,7 @@
         <head>
         <meta charset="UTF-8">
         
-
         <!-- Favicon icon -->
-
         <link rel="icon" href="assets/images/logo_icon.png" type="image/x-icon">
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" >
