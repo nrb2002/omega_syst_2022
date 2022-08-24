@@ -363,16 +363,7 @@ require 'includes/db.php';
                                     <!--Contact Info Local Rep-->
                                     <div class="row border">
                                         <div class="col ">
-                                            <table class="table table-hover table-borderless">
-                                                <!--
-                                                <thead>
-                                                    <tr>
-                                                    <th scope="col">First</th>
-                                                    <th scope="col">Last</th>
-                                                    <th scope="col">Handle</th>
-                                                    </tr>
-                                                </thead>
-                                                -->
+                                            <table class="table table-hover table-borderless">                                                
                                                 <tbody>
                                                     <tr>
                                                         <th scope="row">Nom</th>
