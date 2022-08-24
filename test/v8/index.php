@@ -20,8 +20,8 @@ require 'includes/header.php';
                     <h3 class="title">Profitez des avantages incontournables qu'offre le réseau OMEGA System</h3>                
                     
                     <div class="btn-holder">
-                        <a href="login.php" class="btn-primary btn-view-product">Se connecter</a>
-                        <a href="register.php" class="btn-primary btn-view-pricing">S'enregistrer</a>
+                        <a href="login" class="btn-primary btn-view-product">Se connecter</a>
+                        <a href="register" class="btn-primary btn-view-pricing">S'enregistrer</a>
                     </div>
                 </div>    
             </div>
