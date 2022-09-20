@@ -86,6 +86,7 @@ if (isset($_POST['formconnexion']))
         $_SESSION['CapitalEse'] = $userinfo['CapitalEse'];
         $_SESSION['ChiffreAffEse'] = $userinfo['ChiffreAffEse'];
         $_SESSION['EmailEse'] = $userinfo['EmailEse'];
+        $_SESSION['SiteWebEse'] = $userinfo['SiteWebEse'];
         $_SESSION['TelephoneEse'] = $userinfo['TelephoneEse'];
         $_SESSION['CouvertureGeoEse'] = $userinfo['CouvertureGeoEse']; //Couverture géographique
         $_SESSION['LibSecteur'] = $userinfo['LibSecteur']; //Secteur d'activités
@@ -198,7 +199,9 @@ if (isset($_POST['formconnexion']))
 else{
     //require 'logout.php';
     //Destruction de toutes les variables de session
-    require 'includes/logout';
+    //require 'includes/logout';
+    header("Location:my-omega?user=".$_SESSION['Pseudo']);
+
     
 }
 

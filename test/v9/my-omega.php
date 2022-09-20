@@ -3,6 +3,11 @@
 //Ouverture de la session
 session_start(); //Ouverture de la session
 
+//Vérifier si aucune session n'est ouverte
+if(!isset($_SESSION['Pseudo'])){
+    header("location:includes/logout");
+}
+
 //Importer l'entête du site
 ob_start(); //Prévient des erreurs de redirection; doit être utilisé avec ob_end_flush() juste après toute redirection
 require 'includes/header.php'; 
@@ -91,9 +96,7 @@ require 'includes/db.php';
                                     <h5 class="text-danger">Identité de l'entité</h5>
                                     <!--Logo-->
                                     <div class="row ">
-
                                         <div class="col-sm-6 p-2 m-auto">
-
                                             <img src="<?php echo $_SESSION['PhotoUser']; ?>" alt="Logo" width="250px">
                                         </div>                                                      
                                     </div>
@@ -101,6 +104,7 @@ require 'includes/db.php';
                                         <button class="btn btn-primary m-2 " type="submit" >Modifier</button>
                                     </div>
                                     <hr>
+
                                     <!--Business Basic Info-->
                                     <div class="row">
                                         <div class="col ">
@@ -139,65 +143,65 @@ require 'includes/db.php';
 
                                 <!--Resources data-->
                                 <div class="col ml-2">
+
                                     <!--Financial data-->
                                     <h5 class="text-danger">Données financières</h5>
-
-                                    <div class="row mt-2 border p-2">                                        
-
+                                    <div class="row mt-2 border p-2">
                                         <table class="table table-hover table-borderless">
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">Chiffre d'affaires annuaire en USD</th>
-                                                    <td>1.000.000,00</td>                                                        
+                                                    <th scope="row">Chiffre d'affaires annuel en USD</th>
+                                                    <td><?php echo $_SESSION['ChiffreAffEse']; ?></td>                                                        
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Capital Social en USD</th>
-                                                    <td>1.000.000,00</td>                                                        
+                                                    <td><?php echo $_SESSION['CapitalEse']; ?></td>                                                        
                                                 </tr>
                                                 
                                             </tbody>
                                         </table>                                                                                                          
                                     </div>
+
                                     <!--Edit Financial data button-->
                                     <div class="row justify-content-end">
                                         <button class="btn btn-primary m-2 " type="submit" >Modifier</button>
                                     </div>
                                     <hr>
+
                                     <!--Personel data-->
                                     <h5 class="text-danger">Ressources humaines</h5>
 
                                     <div class="row mt-2 border p-2">
 
                                         <table class="table table-hover table-borderless">
-                                            <!--
-                                            <thead>
-                                                <tr>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
-                                                </tr>
-                                            </thead>
-                                            -->
                                             <tbody>
                                                 <tr>
                                                     <th scope="row">Effectif total du personnel</th>
-                                                    <td>50</td>                                                        
+                                                    <?php
+                                                    $salaries = $_SESSION['NbreSalariesEse'];
+                                                    $temporaires = $_SESSION['NbreTemporairesEse'];
+                                                    $journaliers = $_SESSION['NbreJournaliersEse'];
+
+                                                    $effectif = $salaries + $temporaires + $journaliers;                                                  
+                                                    ?>
+                                                    <td><strong><?php echo $effectif; ?></strong></td>                                                        
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Salariés</th>
-                                                    <td>5</td>                                                        
+                                                    <td><?php echo $salaries; ?></td>                                                        
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Temporaires</th>
-                                                    <td>15</td>                                                        
+                                                    <td><?php echo $temporaires; ?></td>                                                        
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Journaliers</th>
-                                                    <td>30</td>                                                        
+                                                    <td><?php echo $journaliers; ?></td>                                                        
                                                 </tr>                                                
                                             </tbody>
                                         </table>                                                
-                                    </div>                                      
+                                    </div> 
+
                                     <!--Edit personel data button-->
                                     <div class="row justify-content-end">
                                         <button class="btn btn-primary m-2 " type="submit" >Modifier</button>
@@ -230,27 +234,18 @@ require 'includes/db.php';
                                         <div class="row">
                                             <div class="col ">
                                                 <table class="table table-hover table-borderless">
-                                                    <!--
-                                                    <thead>
-                                                        <tr>
-                                                        <th scope="col">First</th>
-                                                        <th scope="col">Last</th>
-                                                        <th scope="col">Handle</th>
-                                                        </tr>
-                                                    </thead>
-                                                    -->
-                                                    <tbody>
+                                                   <tbody>
                                                         <tr>
                                                             <th scope="row">Téléphone</th>
-                                                            <td>+243822358941</td>                                                        
+                                                            <td><?php $_SESSION['TelephoneEse'];?></td>                                                        
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">Adresse électronique</th>
-                                                            <td>infos@tb5.com</td>                                                        
+                                                            <td><?php $_SESSION['EmailEse'];?></td>                                                        
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">Site web</th>
-                                                            <td>www.tb5.cd</td>                                                        
+                                                            <td><?php echo $_SESSION['SiteWebEse'];?></td>                                                        
                                                         </tr>                                                    
                                                     </tbody>
                                                 </table>
@@ -304,15 +299,6 @@ require 'includes/db.php';
                                         <div class="row">
                                             <div class="col ">
                                                 <table class="table table-hover table-borderless">
-                                                    <!--
-                                                    <thead>
-                                                        <tr>
-                                                        <th scope="col">First</th>
-                                                        <th scope="col">Last</th>
-                                                        <th scope="col">Handle</th>
-                                                        </tr>
-                                                    </thead>
-                                                    -->
                                                     <tbody>
                                                         <tr>
                                                             <th scope="row">Rue, Numéro, Quartier, Commune/Territoire/Village</th>
